@@ -3,14 +3,21 @@
 #include<stdio.h>
 #include<locale.h>
 
+
 #ifdef ex1
 //1. Ler um número inteiro e imprimir seu sucessor e seu antecessor.
 
-int main()
+int main(void)
 {
+    setlocale(LC_ALL, "");
+    int num;
 
+        printf("Digite um número!\n");
+        scanf("%d",&num);
+        printf("\nO antececessor de %d é o número %d, sendo seu sucessor é %d \n", num, num-1, num+1);
     return 0;
 }
+#endif // ex1
 
 #ifdef ex2
 
@@ -22,6 +29,8 @@ int main()
     return 0;
 }
 
+#endif // ex2
+
 #ifdef ex3
 
 //3. Informar um preço de um produto e calcular novo preço com desconto de 9%
@@ -30,6 +39,7 @@ int main()
 
     return 0;
 }
+#endif // ex3
 
 #ifdef ex4
 
@@ -40,6 +50,7 @@ int main()
 
     return 0;
 }
+#endif // ex4
 
 #ifdef ex5
 
@@ -58,7 +69,4 @@ int main()
     return 0;
 }
 
-
-
-
-#endif // ex1
+#endif // ex5
