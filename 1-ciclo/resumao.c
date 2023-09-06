@@ -1,4 +1,4 @@
-#define ex3
+#define ex4
 
 #include<stdio.h>
 #include<locale.h>
@@ -64,6 +64,10 @@ int main()
 
 int main()
 {
+    setlocale(LC_ALL,"");
+
+    float sal;
+        printf("Insira o valor da hora/aula\n");
 
     return 0;
 }
