@@ -1,4 +1,4 @@
-#define ex1
+#define ex3
 
 #include<stdio.h>
 #include<locale.h>
@@ -25,6 +25,14 @@ int main(void)
 
 int main()
 {
+    setlocale(LC_ALL,"");
+
+    float num;
+
+    printf("Insira um número\n");
+    scanf("%f",&num);
+    system("cls");
+    printf("O valor reajustado de %.2f é %.2f\n", num,num+(num/10));
 
     return 0;
 }
@@ -34,8 +42,17 @@ int main()
 #ifdef ex3
 
 //3. Informar um preço de um produto e calcular novo preço com desconto de 9%
+
 int main()
 {
+    setlocale(LC_ALL,"");
+
+    float preco;
+
+    printf("Insira o preço de um produto.\n");
+    scanf("%f",&preco);
+    system("cls");
+    printf("O preço do produto passou de: %.2f para o novo preço de %.2f\n", preco, preco*1.09);
 
     return 0;
 }
