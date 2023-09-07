@@ -1,4 +1,4 @@
-#define ex5
+#define ex3
 
 #include<stdio.h>
 #include<locale.h>
@@ -60,7 +60,7 @@ int main()
     }
     while (preco<=0);
     system("cls");
-    printf("O preço do produto passou de: %.2f para o novo preço de %.2f\n", preco, preco*1.09);
+    printf("O preço do produto passou de: %.2f para o novo preço de %.2f\n", preco, preco*0.91);
 
     return 0;
 }
@@ -124,8 +124,21 @@ int main()
 #endif // ex4
 
 #ifdef ex5
+//Ler uma temperatura em graus Celsius e transformá-la em graus Fahrenheit.
 
-/* 5. O custo ao consumidor de um carro novo é a soma do preço da fábrica com o
+#endif // ex5
+
+#ifdef ex6
+6.	Faça um programa que receba o ano do nascimento de uma pessoa e o ano atual, calcule e mostre:
+a.	A idade dessa pessoa
+b.	Quantos anos essa pessoa terá em no ano atual.
+c.	Quantos dias ela viverá até o ano atual.
+
+#endif // ex6
+
+#ifdef ex7
+
+/* 7. O custo ao consumidor de um carro novo é a soma do preço da fábrica com o
 *   percentual de lucro do distribuidor e dos impostos aplicados ao preço de fábrica. Faça
 *   um programa que receba o preço de fábrica de um veículo, o percentual de lucro do
 *   distribuidor e o percentual de impostos. Calcule e mostre:
@@ -186,4 +199,11 @@ int main()
     return 0;
 }
 
-#endif // ex5
+#endif // ex7
+
+#ifdef ex8
+8.	Elabore um programa que receba o salário de um funcionário e calcule o reajuste desse salário.
+Considere que o funcionário deve receber um reajuste de 15% caso seu salário seja menor que 800 reais.
+Se o salário for maior ou igual a 800 e menor ou igual a 1000, seu reajuste será de 10 %; caso seja maior que 1000, o reajuste deve ser de 5%.
+Ao final do programa deve apresentar o valor antigo e o novo salário.
+#endif // ex8
