@@ -1,4 +1,4 @@
-#define ex4
+#define ex5
 
 #include<stdio.h>
 #include<locale.h>
@@ -49,8 +49,16 @@ int main()
 
     float preco;
 
-    printf("Insira o preço de um produto.\n");
-    scanf("%f",&preco);
+    do
+    {
+        printf("Insira o preço de um produto.\n");
+        scanf("%f",&preco);
+        if (preco<=0)
+        {
+            printf("Valor não pode ser negativo\n");
+        }
+    }
+    while (preco<=0);
     system("cls");
     printf("O preço do produto passou de: %.2f para o novo preço de %.2f\n", preco, preco*1.09);
 
@@ -69,13 +77,46 @@ int main()
     float hora, inss;
     int aula;
 
+    do
+    {
         printf("Insira o valor da hora/aula:\n");
         scanf("%f",&hora);
+        if (hora<=0)
+        {
+            printf("Valor da hora/aula não pode ser igual ou menor a 0\n\nVerifique e insira um valor válido\n\n");
+            system("pause");
+            system("cls");
+        }
+    }
+    while (hora<=0);
+
+    do
+    {
         printf("Insira o quantidade de aulas dadas:\n");
         scanf("%d",&aula);
+        if (aula<=0)
+        {
+            printf("A quantidade de aulas não pode ser igual ou inferior a 0\n\nVerifique e insira um valor válido.\n\n");
+            system("pause");
+            system("cls");
+        }
+    }
+    while (aula<=0);
+
+    do
+    {
         printf("Insira o valor percentual de desconto do inss:\n");
         scanf("%f",&inss);
-        printf("O salário líquido será de %2.f\n", (hora*aula)-(hora*aula*(inss/100)));
+        if(inss<0)
+        {
+            printf("O desconto do INSS não pode ser inferior a 0\n\nVerifique e insira um valor válido.\n\n");
+            system("pause");
+            system("cls");
+        }
+    }
+    while (inss<0);
+
+    printf("O salário líquido será de %2.f\n", (hora*aula)-(hora*aula*(inss/100)));
 
 
     return 0;
@@ -99,16 +140,48 @@ int main()
 
     float preco, lucro, imposto;
 
-    printf("Insira o valor do veículo.\n");
-    scanf("%f", &preco);
+
+    do
+    {
+        printf("Insira o valor do veículo.\nR$");
+        scanf("%f", &preco);
+        if (preco<=0)
+        {
+            system("cls");
+            printf("O valor do veículo não pode ser inferior ou menor a R$0,00\n\n");
+            system("pause");
+        }
+    }
+    while(preco<=0);
     system("cls");
-    printf("Insira o valor percentual de lucro do veículo.\n");
-    scanf("%f",&lucro);
+    do
+    {
+        printf("Insira o valor percentual de lucro do veículo.\n");
+        scanf("%f",&lucro);
+        if(lucro<0)
+        {
+            system("cls");
+            printf("Valor do percentual d0 lucro não pode ser inferior a 0\n\n");
+            system("pause");
+        }
+    }
+    while(lucro<0);
     system("cls");
-    printf("Insira o valor percentual de impostos\n");
-    scanf("%f",&imposto);
+
+    do
+    {
+        printf("Insira o valor percentual de impostos\n");
+        scanf("%f",&imposto);
+        if(imposto<0)
+        {
+            system("cls");
+            printf("Valor percentual do imposto não pode ser inferior a 0\n\n");
+            system("pause");
+        }
+    }
+    while(imposto<0);
     system("cls");
-    printf("O valor do veículo é de: %2.f\nO lucro do distribuidor é de: %2.f\nO valor dos impostos é: %2.f\nO valor final do veículo é %2.f",preco, preco*(lucro/100), preco*(imposto/100), preco+(preco*(lucro/100))+(preco*(imposto/100)));
+    printf("O valor do veículo é de:R$%2.f\nO lucro do distribuidor é de:R$%2.f\nO valor dos impostos é:R$ %2.f\nO valor final do veículo é de:R$%2.f",preco, preco*(lucro/100), preco*(imposto/100), preco+(preco*(lucro/100))+(preco*(imposto/100)));
 
     return 0;
 }
