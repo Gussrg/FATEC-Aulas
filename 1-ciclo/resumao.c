@@ -66,8 +66,17 @@ int main()
 {
     setlocale(LC_ALL,"");
 
-    float sal;
-        printf("Insira o valor da hora/aula\n");
+    float hora, inss;
+    int aula;
+
+        printf("Insira o valor da hora/aula:\n");
+        scanf("%f",&hora);
+        printf("Insira o quantidade de aulas dadas:\n");
+        scanf("%d",&aula);
+        printf("Insira o valor percentual de desconto do inss:\n");
+        scanf("%f",&inss);
+        printf("O salário líquido será de %2.f\n", (hora*aula)-(hora*aula*(inss/100)));
+
 
     return 0;
 }
@@ -86,6 +95,20 @@ int main()
 
 int main()
 {
+    setlocale(LC_ALL,"");
+
+    float preco, lucro, imposto;
+
+    printf("Insira o valor do veículo.\n");
+    scanf("%f", &preco);
+    system("cls");
+    printf("Insira o valor percentual de lucro do veículo.\n");
+    scanf("%f",&lucro);
+    system("cls");
+    printf("Insira o valor percentual de impostos\n");
+    scanf("%f",&imposto);
+    system("cls");
+    printf("O valor do veículo é de: %2.f\nO lucro do distribuidor é de: %2.f\nO valor dos impostos é: %2.f\nO valor final do veículo é %2.f",preco, preco*(lucro/100), preco*(imposto/100), preco+(preco*(lucro/100))+(preco*(imposto/100)));
 
     return 0;
 }
