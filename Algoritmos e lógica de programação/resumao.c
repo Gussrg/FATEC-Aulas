@@ -1,4 +1,4 @@
-#define ex3
+#define ex4
 
 #include<stdio.h>
 #include<locale.h>
@@ -107,14 +107,14 @@ int main()
     {
         printf("Insira o valor percentual de desconto do inss:\n");
         scanf("%f",&inss);
-        if(inss<0)
+        if(inss<0 || inss>=100)
         {
             printf("O desconto do INSS não pode ser inferior a 0\n\nVerifique e insira um valor válido.\n\n");
             system("pause");
             system("cls");
         }
     }
-    while (inss<0);
+    while (inss<0 || inss>=100);
 
     printf("O salário líquido será de %2.f\n", (hora*aula)-(hora*aula*(inss/100)));
 
@@ -125,6 +125,19 @@ int main()
 
 #ifdef ex5
 //Ler uma temperatura em graus Celsius e transformá-la em graus Fahrenheit.
+
+int main ()
+{
+    setlocale(LC_ALL,"");
+
+    float graus;
+
+    printf("Digite o a temperatura em graus celsius:\n");
+    scanf("%f",&graus);
+    printf("A temperatura em graus celsius de: %.f°C será de: %.f°F Fahrenheit.\n", graus, (graus*1.8)+32);
+
+    return (0);
+}
 
 #endif // ex5
 
