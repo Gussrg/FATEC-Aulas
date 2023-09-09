@@ -1,4 +1,4 @@
-#define ex4
+#define ex99
 
 #include<stdio.h>
 #include<locale.h>
@@ -219,4 +219,186 @@ int main()
 Considere que o funcionário deve receber um reajuste de 15% caso seu salário seja menor que 800 reais.
 Se o salário for maior ou igual a 800 e menor ou igual a 1000, seu reajuste será de 10 %; caso seja maior que 1000, o reajuste deve ser de 5%.
 Ao final do programa deve apresentar o valor antigo e o novo salário.
+
 #endif // ex8
+
+#ifdef ex9
+9.	Leia quatro valores referentes às notas escolares de um aluno e exiba uma mensagem dizendo que ele foi aprovado se a média for maior ou igual a 6.
+Caso contrário informe que ele está reprovado. Apresente junto à mensagem o valor da média obtida pelo aluno independente de ter sido aprovado ou não.
+As notas deverão ser maiores ou iguais a zero e menores ou iguais a dez.
+
+
+
+#endif // ex9
+
+#ifdef ex10
+10.	Receba dois números, o primeiro deve ser maior que 10 e menor que 25, o segundo deve ser maior ou igual a zero,
+o terceiro deve ser a soma dos dois primeiros e o quarto é o produto dos três números anteriores.
+Calcule e exiba a soma dos quadrados de cada um dos quatro números. Caso o resultado seja menor que 50000, solicite novos dados.
+
+#endif // ex10
+
+#ifdef ex99
+
+int sucessor(void)
+{
+    //1. Ler um número inteiro e imprimir seu sucessor e seu antecessor.
+
+    int num;
+
+    printf("Digite um número!\n");
+    scanf("%d",&num);
+    printf("\nO antececessor de %d é o número %d, sendo seu sucessor é %d \n\n", num, num-1, num+1);
+    system("pause");
+    system("cls");
+
+}
+
+float reajustar()
+{
+    //2. Receber um valor qualquer do teclado e imprimir esse valor com reajuste de 10%.
+
+    float num;
+
+    printf("Insira um número\n");
+    scanf("%f",&num);
+    system("cls");
+    printf("O valor reajustado de %.2f é %.2f\n", num,num+(num/10));
+    system("pause");
+    system("cls");
+
+}
+
+float desconto()
+{
+    //3. Informar um preço de um produto e calcular novo preço com desconto de 9%
+
+    float preco;
+
+    do
+    {
+        printf("Insira o preço de um produto.\n");
+        scanf("%f",&preco);
+        if (preco<=0)
+        {
+            printf("Valor não pode ser negativo\n");
+        }
+    }
+    while (preco<=0);
+    system("cls");
+    printf("O preço do produto passou de: %.2f para o novo preço de %.2f\n", preco, preco*0.91);
+    system("pause");
+    system("cls");
+
+}
+
+float salario()
+{
+    //4. Cálculo de um salário líquido de um professor. Serão fornecidos valor da hora aula, número de aulas dadas e o % de desconto do INSS.
+
+    float hora, inss;
+    int aula;
+
+    do
+    {
+        printf("Insira o valor da hora/aula:\n");
+        scanf("%f",&hora);
+        if (hora<=0)
+        {
+            printf("Valor da hora/aula não pode ser igual ou menor a 0\n\nVerifique e insira um valor válido\n\n");
+            system("pause");
+            system("cls");
+        }
+    }
+    while (hora<=0);
+
+    do
+    {
+        printf("Insira o quantidade de aulas dadas:\n");
+        scanf("%d",&aula);
+        if (aula<=0)
+        {
+            printf("A quantidade de aulas não pode ser igual ou inferior a 0\n\nVerifique e insira um valor válido.\n\n");
+            system("pause");
+            system("cls");
+        }
+    }
+    while (aula<=0);
+
+    do
+    {
+        printf("Insira o valor percentual de desconto do inss:\n");
+        scanf("%f",&inss);
+        if(inss<0 || inss>=100)
+        {
+            printf("O desconto do INSS não pode ser inferior a 0\n\nVerifique e insira um valor válido.\n\n");
+            system("pause");
+            system("cls");
+        }
+    }
+    while (inss<0 || inss>=100);
+
+    printf("O salário líquido será de %2.f\n", (hora*aula)-(hora*aula*(inss/100)));
+    system("pause");
+    system("cls");
+
+}
+
+
+
+float graus()
+{
+    //5.Ler uma temperatura em graus Celsius e transformá-la em graus Fahrenheit.;
+
+    float graus;
+
+    printf("Digite o a temperatura em graus celsius:\n");
+    scanf("%f",&graus);
+    printf("A temperatura em graus celsius de: %.f°C será de: %.f°F Fahrenheit.\n", graus, (graus*1.8)+32);
+    system("pause");
+    system("cls");
+
+}
+
+int main (void)
+{
+    setlocale(LC_ALL, "");
+    int escolha;
+
+    do
+    {
+        printf("- Escolha a opção que deseja:\n\n");
+        printf("1 - Informar o sucessor e antecessor\n");
+        printf("2 - Reajustar 10%%\n");
+        printf("3 - Desconto de 9%%\n");
+        printf("4 - Calcular salário e INSS\n");
+        printf("5 - Converter Celsius para Fahrenheit\n");
+        scanf("%d",&escolha);
+        system("cls");
+
+        switch(escolha)
+        {
+        case 1:
+            sucessor();
+            break;
+        case 2:
+            reajustar();
+            break;
+        case 3:
+            desconto();
+            break;
+        case 4:
+            salario();
+            break;
+        case 5:
+            graus();
+            break;
+        default:
+            printf("\nOpção inválida\n");
+            break;
+        }
+
+    }
+    while(escolha!=6);
+}
+#endif // ex99
