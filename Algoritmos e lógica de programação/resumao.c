@@ -215,19 +215,80 @@ int main()
 #endif // ex7
 
 #ifdef ex8
-8.	Elabore um programa que receba o salário de um funcionário e calcule o reajuste desse salário.
+/*8.	Elabore um programa que receba o salário de um funcionário e calcule o reajuste desse salário.
 Considere que o funcionário deve receber um reajuste de 15% caso seu salário seja menor que 800 reais.
 Se o salário for maior ou igual a 800 e menor ou igual a 1000, seu reajuste será de 10 %; caso seja maior que 1000, o reajuste deve ser de 5%.
-Ao final do programa deve apresentar o valor antigo e o novo salário.
+Ao final do programa deve apresentar o valor antigo e o novo salário.*/
 
+int main()
+{
+    setlocale(LC_ALL,"");
+
+    float salario=0;
+
+volta:
+    system("cls");
+    printf("Insira o valor do salário atual.\n");
+    scanf("%f",&salario);
+    if(salario>0 && salario<800)
+    {
+        printf("Seu salário de:R$%2.f com reajuste de 15%% será de:R$%2.f\n", salario, salario*1.15);
+    }
+    if (salario>=800 && salario<=1000)
+    {
+        printf("Seu salário de:R$%2.f com reajuste de 10%% será de:R$%2.f\n", salario, salario*1.10);
+    }
+    if(salario>1000)
+    {
+        printf("Seu salário de:R$%2.f com reajuste de 5%% será de:R$%2.f\n", salario, salario*1.05);
+    }
+    if(salario<=0)
+    {
+        printf("Valor invalido\n");
+        system("pause");
+        goto volta;
+    }
+}
 #endif // ex8
 
 #ifdef ex9
-9.	Leia quatro valores referentes às notas escolares de um aluno e exiba uma mensagem dizendo que ele foi aprovado se a média for maior ou igual a 6.
+/*9.	Leia quatro valores referentes às notas escolares de um aluno e exiba uma mensagem dizendo que ele foi aprovado se a média for maior ou igual a 6.
 Caso contrário informe que ele está reprovado. Apresente junto à mensagem o valor da média obtida pelo aluno independente de ter sido aprovado ou não.
-As notas deverão ser maiores ou iguais a zero e menores ou iguais a dez.
+As notas deverão ser maiores ou iguais a zero e menores ou iguais a dez.*/
 
+int main()
+{
+    setlocale(LC_ALL,"");
+    int cont=1;
+    float nota=0, soma=0, media=0;
 
+    do
+    {
+        printf("Insira a %d nota\n", cont);
+        scanf("%f",&nota);
+        do
+        {
+            if(nota<0 || nota>10)
+            {
+                printf("Nota inválida, verifique e insira novamente:\n\n");
+                scanf("%f",&nota);
+            }
+        }
+        while(nota<0 || nota>10);
+        cont++;
+        soma=nota+soma;
+    }
+    while(cont<5);
+    media=soma/4;
+    if (media >=6)
+    {
+        printf("Parabéns, aluno aprovado com média de:%.1f",media);
+    }
+    else
+    {
+        printf("Aluno reprovado com média de:%.1f", media);
+    }
+}
 
 #endif // ex9
 
@@ -360,6 +421,125 @@ float graus()
 
 }
 
+int Lucro_Veiculo()
+{
+
+    float preco, lucro, imposto;
+
+
+    do
+    {
+        printf("Insira o valor do veículo.\nR$");
+        scanf("%f", &preco);
+        if (preco<=0)
+        {
+            system("cls");
+            printf("O valor do veículo não pode ser inferior ou menor a R$0,00\n\n");
+            system("pause");
+        }
+    }
+    while(preco<=0);
+    system("cls");
+    do
+    {
+        printf("Insira o valor percentual de lucro do veículo.\n");
+        scanf("%f",&lucro);
+        if(lucro<0)
+        {
+            system("cls");
+            printf("Valor do percentual d0 lucro não pode ser inferior a 0\n\n");
+            system("pause");
+        }
+    }
+    while(lucro<0);
+    system("cls");
+
+    do
+    {
+        printf("Insira o valor percentual de impostos\n");
+        scanf("%f",&imposto);
+        if(imposto<0)
+        {
+            system("cls");
+            printf("Valor percentual do imposto não pode ser inferior a 0\n\n");
+            system("pause");
+        }
+    }
+    while(imposto<0);
+    system("cls");
+    printf("O valor do veículo é de:R$%2.f\nO lucro do distribuidor é de:R$%2.f\nO valor dos impostos é:R$ %2.f\nO valor final do veículo é de:R$%2.f",preco, preco*(lucro/100), preco*(imposto/100), preco+(preco*(lucro/100))+(preco*(imposto/100)));
+    system("pause");
+    system("cls");
+
+}
+
+int reajuste_salario()
+{
+
+    float salario=0;
+
+volta:
+    system("cls");
+    printf("Insira o valor do salário atual.\n");
+    scanf("%f",&salario);
+    if(salario>0 && salario<800)
+    {
+        printf("Seu salário de:R$%2.f com reajuste de 15%% será de:R$%2.f\n", salario, salario*1.15);
+    }
+    if (salario>=800 && salario<=1000)
+    {
+        printf("Seu salário de:R$%2.f com reajuste de 10%% será de:R$%2.f\n", salario, salario*1.10);
+    }
+    if(salario>1000)
+    {
+        printf("Seu salário de:R$%2.f com reajuste de 5%% será de:R$%2.f\n", salario, salario*1.05);
+    }
+    if(salario<=0)
+    {
+        printf("Valor invalido\n");
+        system("pause");
+        goto volta;
+    }
+    system("pause");
+    system("cls");
+}
+
+int media_nota()
+{
+    setlocale(LC_ALL,"");
+    int cont=1;
+    float nota=0, soma=0, media=0;
+
+    do
+    {
+        printf("Insira a %d nota\n", cont);
+        scanf("%f",&nota);
+        do
+        {
+            if(nota<0 || nota>10)
+            {
+                printf("Nota inválida, verifique e insira novamente:\n\n");
+                scanf("%f",&nota);
+            }
+        }
+        while(nota<0 || nota>10);
+        cont++;
+        soma=nota+soma;
+    }
+    while(cont<5);
+    media=soma/4;
+    if (media >=6)
+    {
+        printf("Parabéns, aluno aprovado com média de:%.1f\n\n",media);
+    }
+    else
+    {
+        printf("Aluno reprovado com média de:%.1f\n\n", media);
+    }
+    system("pause");
+    system("cls");
+}
+
 int main (void)
 {
     setlocale(LC_ALL, "");
@@ -373,6 +553,9 @@ int main (void)
         printf("3 - Desconto de 9%%\n");
         printf("4 - Calcular salário e INSS\n");
         printf("5 - Converter Celsius para Fahrenheit\n");
+        printf("7 - Calcular lucro de um veículo\n");
+        printf("8 - Reajustar salário\n");
+        printf("9 - Calcular média das notas\n");
         scanf("%d",&escolha);
         system("cls");
 
@@ -393,6 +576,13 @@ int main (void)
         case 5:
             graus();
             break;
+        case 7:
+            Lucro_Veiculo();
+            break;
+        case 8:
+            reajuste_salario();
+        case 9:
+            media_nota();
         default:
             printf("\nOpção inválida\n");
             break;
