@@ -1,4 +1,4 @@
-#define ex99
+#define ex10
 
 #include<stdio.h>
 #include<locale.h>
@@ -293,9 +293,48 @@ int main()
 #endif // ex9
 
 #ifdef ex10
-10.	Receba dois números, o primeiro deve ser maior que 10 e menor que 25, o segundo deve ser maior ou igual a zero,
+/*10.	Receba dois números, o primeiro deve ser maior que 10 e menor que 25, o segundo deve ser maior ou igual a zero,
 o terceiro deve ser a soma dos dois primeiros e o quarto é o produto dos três números anteriores.
-Calcule e exiba a soma dos quadrados de cada um dos quatro números. Caso o resultado seja menor que 50000, solicite novos dados.
+Calcule e exiba a soma dos quadrados de cada um dos quatro números. Caso o resultado seja menor que 50000, solicite novos dados.*/
+
+int main()
+{
+    setlocale(LC_ALL,"");
+
+    int num1,num2,soma;
+
+    printf("Insira um número entre 10 e 25\n\n");
+    scanf("%d",&num1);
+    do
+    {
+        if(num1<=10 || num1>=25)
+        {
+            printf("Número inválido, entre com um número entre 10 e 25\n");
+            scanf("%d",&num1);
+        }
+    }
+    while (num1<=10 || num1>=25);
+    printf("Insira um número maior que 0\n");
+    scanf("%d",&num2);
+    do
+    {
+        if(num2<0)
+        {
+            printf("Número invalido, insira um número maior que 0\n");
+            scanf("%d",&num2);
+        }
+    }
+    while(num2<0);
+
+    soma=num1+num2;
+    if( (num1*num1)+(num2*num2)+(soma*soma)>5000)
+    {
+        printf("%d, %d, %d", num1*num1, num2*num2, soma*soma);
+        printf("Insira novos dados.\n");
+    }
+
+
+}
 
 #endif // ex10
 
