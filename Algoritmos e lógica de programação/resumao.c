@@ -1,4 +1,4 @@
-#define ex10
+#define ex99
 
 #include<stdio.h>
 #include<locale.h>
@@ -303,6 +303,9 @@ int main()
 
     int num1,num2,num3, num4;
 
+
+    volta:
+    system("cls");
     printf("Insira um número entre 10 e 25\n\n");
     scanf("%d",&num1);
     do
@@ -330,10 +333,13 @@ int main()
     num4=num1*num2*num3;
 
 
-    if( (num1*num1+num2*num2+num3*num3+num4*num4)<5000)
+    if( (num1*num1+num2*num2+num3*num3+num4*num4)<50000)
     {
 
-        printf("Insira novos dados.\n");
+        printf("Valor final menor que 50.000, insira novos dados.\n\n");
+        system("pause");
+
+        goto volta;
     }
 
     printf("Primeiro numero:%.d\nSegundo número:%.d\nTerceiro número:%.d\nQuarto número:%.d\nSoma dos quadrados:%.d\n",num1,num2,num3,num4, num1*num1+num2*num2+num3*num3+num4*num4);
@@ -583,6 +589,57 @@ int media_nota()
     system("cls");
 }
 
+int soma_quadrados()
+{
+
+
+    int num1,num2,num3, num4;
+
+
+    volta:
+    system("cls");
+    printf("Insira um número entre 10 e 25\n\n");
+    scanf("%d",&num1);
+    do
+    {
+        if(num1<10 || num1>25)
+        {
+            printf("Número inválido, entre com um número entre 10 e 25\n");
+            scanf("%d",&num1);
+        }
+    }
+    while (num1<10 || num1>25);
+    printf("Insira um número maior que 0\n");
+    scanf("%d",&num2);
+    do
+    {
+        if(num2<0)
+        {
+            printf("Número invalido, insira um número maior que 0\n");
+            scanf("%d",&num2);
+        }
+    }
+    while(num2<0);
+
+    num3=num1+num2;
+    num4=num1*num2*num3;
+
+
+    if( (num1*num1+num2*num2+num3*num3+num4*num4)<50000)
+    {
+
+        printf("Valor final menor que 50.000, insira novos dados.\n\n");
+        system("pause");
+
+        goto volta;
+    }
+
+    printf("Primeiro numero:%.d\nSegundo número:%.d\nTerceiro número:%.d\nQuarto número:%.d\nSoma dos quadrados:%.d\n",num1,num2,num3,num4, num1*num1+num2*num2+num3*num3+num4*num4);
+    printf("Quadrado 1, %d\nQuadrado 2, %d\nQuadrado 3, %d\nQuadrado 4, %d\n\n", num1*num1,num2*num2, num3*num3,num4*num4);
+    system("pause");
+    system("cls");
+}
+
 int main (void)
 {
     setlocale(LC_ALL, "");
@@ -599,6 +656,7 @@ int main (void)
         printf("7 - Calcular lucro de um veículo\n");
         printf("8 - Reajustar salário\n");
         printf("9 - Calcular média das notas\n");
+        printf("10 - Soma dos quadrados\n");
         scanf("%d",&escolha);
         system("cls");
 
@@ -626,6 +684,9 @@ int main (void)
             reajuste_salario();
         case 9:
             media_nota();
+        case 10:
+            soma_quadrados();
+            break;
         default:
             printf("\nOpção inválida\n");
             break;
