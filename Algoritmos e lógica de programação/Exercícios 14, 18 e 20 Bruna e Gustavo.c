@@ -199,10 +199,11 @@ salário fixo de um funcionário. Mostre o sexo, a idade e o salário obtido após o
 int main(void){
 setlocale(LC_ALL, "");
 float salario;
-int idade, d=1;
-char sexo;
+int idade;
+char sexo, fim;
 
-    while (d==1){
+do
+    {
         do{
             printf ("Digite a idade:\n");
             scanf ("%d", &idade);
@@ -223,18 +224,19 @@ char sexo;
         scanf ("%c", &sexo);
         sexo=getchar();
 
-        if (sexo=='M' && idade>=30){
+        if (sexo=='M' || sexo=='m'&& idade>=30){
             printf ("Sexo: masculino.\nIdade: %i.\nSalário com abono: %.2f.\n", idade, salario+200);
-        } else if (sexo=='M' && idade<30){
+        } else if (sexo=='M' || sexo=='m' && idade<30){
                 printf ("Sexo: masculino.\nIdade: %i.\nSalário com abono: %.2f.\n", idade, salario+120);
-            } else if (sexo=='F' && idade>=30){
+            } else if (sexo=='F' || sexo=='f' && idade>=30){
                     printf ("Sexo: feminino.\nIdade: %i.\nSalário com abono: %.2f.\n", idade, salario+220);
-                } else if (sexo=='F' && idade<30){
+                } else if (sexo=='F' || sexo=='f' && idade<30){
                     printf ("Sexo: feminino.\nIdade: %i.\nSalário com abono: %.2f.\n", idade, salario+130);
                 }
-            printf ("Deseja fazer um novo cálculo? Pressione 1 para continuar ou qualquer outro número para encerrar o programa.\n");
-            scanf ("%d",&d);
-    }
+            printf ("Deseja fazer um novo cálculo? tecle S para continuar ou qualquer outra tecla para encerrar o programa.\n");
+            getchar();
+            scanf ("%c",&fim);
+    }while (fim=='s');
     return 0;
 }
 #endif ex20
