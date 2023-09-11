@@ -301,19 +301,19 @@ int main()
 {
     setlocale(LC_ALL,"");
 
-    int num1,num2,soma;
+    int num1,num2,num3, num4;
 
     printf("Insira um número entre 10 e 25\n\n");
     scanf("%d",&num1);
     do
     {
-        if(num1<=10 || num1>=25)
+        if(num1<10 || num1>25)
         {
             printf("Número inválido, entre com um número entre 10 e 25\n");
             scanf("%d",&num1);
         }
     }
-    while (num1<=10 || num1>=25);
+    while (num1<10 || num1>25);
     printf("Insira um número maior que 0\n");
     scanf("%d",&num2);
     do
@@ -326,14 +326,18 @@ int main()
     }
     while(num2<0);
 
-    soma=num1+num2;
-    if( (num1*num1)+(num2*num2)+(soma*soma)>5000)
+    num3=num1+num2;
+    num4=num1*num2*num3;
+
+
+    if( (num1*num1+num2*num2+num3*num3+num4*num4)<5000)
     {
-        printf("%d, %d, %d", num1*num1, num2*num2, soma*soma);
+
         printf("Insira novos dados.\n");
     }
 
-
+    printf("Primeiro numero:%.d\nSegundo número:%.d\nTerceiro número:%.d\nQuarto número:%.d\nSoma dos quadrados:%.d\n",num1,num2,num3,num4, num1*num1+num2*num2+num3*num3+num4*num4);
+    printf("Quadrado 1, %d\nQuadrado 2, %d\nQuadrado 3, %d\nQuadrado 4, %d\n", num1*num1,num2*num2, num3*num3,num4*num4);
 }
 
 #endif // ex10
