@@ -348,6 +348,22 @@ int main()
 
 #endif // ex10
 
+#ifdef ex11
+//11.	Escrever um algoritmo que receba dois números e informe ao usuário se eles são iguais ou se são distintos. Se forem distintos informe qual é o maior.
+
+
+#endif // ex11
+
+#ifdef ex12
+//12.	Escrever um algoritmo que leia três números quaisquer e informe qual é o maior e se eles forem todos igual informe ao usuário e solicite novos dados.
+
+#endif // ex12
+
+#ifdef ex13
+//13.	Faça um algoritmo para receber um número qualquer e informar na tela se é par ou ímpar.
+
+#endif // ex13
+
 #ifdef ex14
 /* 14.Receba três números que representam os lados de um triângulo e garantam a existência
 de um triângulo. Informe ao usuário se o triângulo é isósceles, equilátero ou escaleno.
@@ -413,6 +429,29 @@ int main (void)
     return 0;
 }
 #endif ex14
+
+#ifdef ex15
+/*Faça um programa que receba o número de horas trabalhadas e o valor do salário mínimo. Calcule e mostre o salário a receber seguindo as regras abaixo:
+a) a hora trabalhada vale a metade do salário mínimo:
+b) o salário bruto equivale ao número de horas trabalhadas multiplicado pelo valor da hora trabalhada:
+c) o imposto equivale a 3% do salário bruto:
+d) o salário a receber equivale ao salário bruto menos o imposto.*/
+
+#endif // ex15
+
+#ifdef ex16
+Cada degrau de uma escada tem X de altura.
+Faça um programa que receba essa altura e a altura que o usuário deseja subindo a escada.
+Calcule e mostre quantos degraus o usuário deverá subir para atingir seu objetivo, sem se preocupar com a altura do usuário.
+
+#endif // ex16
+
+#ifdef ex17
+/*17.	Faça um programa que receba a altura e o sexo de uma pessoa e que calcule e mostre o seu peso ideal, utilizando as seguintes fórmulas:
+a.	Para homens (72 * h) – 58
+b.	Para mulheres (62,1* h) – 44.7*/
+
+#endif // ex17
 
 #ifdef ex18
 /*18.O IMC – Índice de Massa Corporal é um critério da Organização Mundial de Saúde para
