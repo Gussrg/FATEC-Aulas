@@ -2,6 +2,7 @@
 
 #include<stdio.h>
 #include<locale.h>
+#include<math.h>
 
 
 #ifdef ex1
@@ -393,12 +394,63 @@ int main()
 #endif // ex11
 
 #ifdef ex12
-//12.	Escrever um algoritmo que leia três números quaisquer e informe qual é o maior e se eles forem todos igual informe ao usuário e solicite novos dados.
+//12.	Escrever um algoritmo que leia três números quaisquer e informe qual é o maior e
+//se eles forem todos igual informe ao usuário e solicite novos dados.
+
+int main()
+{
+    setlocale(LC_ALL,"");
+    int num1, num2, num3;
+
+    do
+    {
+        printf("Insira o primeiro número:\n");
+        scanf("%d",&num1);
+        printf("Insira o segundo número:\n");
+        scanf("%d",&num2);
+        printf("Insira o terceiro número:\n");
+        scanf("%d",&num3);
+        if (num1==num2 && num1==num3)
+        {
+            system("cls");
+            printf("Números iguais, digite novos números\n");
+        }
+        else if (num1>num2 && num1>num3)
+        {
+            printf("O maior número é:%d\n",num1);
+        }
+        else if(num2>num1 && num2>num3)
+        {
+            printf("O maior número é:%d\n",num2);
+        }
+        else
+        {
+            printf("O maior número é:%d\n",num3);
+        }
+    }
+    while(num1==num2 && num1==num3);
+}
 
 #endif // ex12
 
 #ifdef ex13
 //13.	Faça um algoritmo para receber um número qualquer e informar na tela se é par ou ímpar.
+
+int main()
+{
+    setlocale(LC_ALL,"");
+    int num;
+
+    printf("Digite um número\n");
+    scanf("%d",&num);
+    if(num%2==0)
+    {
+        printf("O número é par\n\n");
+    } else {
+
+    printf("O número é impar\n");
+    }
+}
 
 #endif // ex13
 
@@ -934,6 +986,113 @@ int numero_diferente()
     while (fim!='s');
 }
 
+int Numeros_diferentes()
+{
+    setlocale(LC_ALL,"");
+    int num1, num2, num3;
+
+    do
+    {
+        printf("Insira o primeiro número:\n");
+        scanf("%d",&num1);
+        printf("Insira o segundo número:\n");
+        scanf("%d",&num2);
+        printf("Insira o terceiro número:\n");
+        scanf("%d",&num3);
+        if (num1==num2 && num1==num3)
+        {
+            system("cls");
+            printf("Números iguais, digite novos números\n");
+        }
+        else if (num1>num2 && num1>num3)
+        {
+            system("cls");
+            printf("O maior número é:%d\n",num1);
+        }
+        else if(num2>num1 && num2>num3)
+        {
+            system("cls");
+            printf("O maior número é:%d\n",num2);
+        }
+        else
+        {
+            system("cls");
+            printf("O maior número é:%d\n",num3);
+        }
+    }
+    while(num1==num2 && num1==num3);
+    system("pause");
+    system("cls");
+}
+int Par_Impar()
+{
+    setlocale(LC_ALL,"");
+    int num;
+
+    printf("Digite um número\n");
+    scanf("%d",&num);
+    if(num%2==0)
+    {
+        printf("O número é par\n\n");
+    } else {
+
+    printf("O número é impar\n");
+    }
+    system("pause");
+    system("cls");
+}
+
+int triangulo()
+{
+    float a, b, c, d=1;
+
+    while (d==1){
+        do{
+            do{
+                printf("Informe a medida do primeiro lado:\n");
+                scanf("%f", &a);
+                if (a<=0){
+                    printf("Valor inválido: os lados de um triângulo devem ser positivos.\n\n");
+                }
+            }
+            while (a<=0);
+            do{
+                printf("Informe a medida do segundo lado:\n");
+                scanf("%f", &b);
+                if (b<=0){
+                    printf("Valor inválido: os lados de um triângulo devem ser positivos.\n\n");
+                }
+            }
+            while (b<=0);
+            do{
+                printf("Informe a medida do terceiro lado:\n");
+                scanf("%f", &c);
+                if (c<=0){
+                    printf("Valor inválido: os lados de um triângulo devem ser positivos.\n\n");
+                }
+            }
+            while (c<=0);
+
+            if (a+b<c || b+c<a || a+c<b){
+                printf("Os lados informados não formam um triângulo. Insira os dados novamente.\n\n");
+            }
+        }
+        while (a+b<c || b+c<a || a+c<b);
+
+        if (a==b && b==c){
+            printf("O triângulo é equilátero.\n");
+        } else {
+            if (a==b || b==c || a==c){
+            printf("O triângulo é isósceles.\n");
+            }else{
+            printf("O triângulo é escaleno.\n");
+            }
+        }
+    printf ("Deseja fazer um novo cálculo? Pressione 1 para continuar ou qualquer outro número para encerrar o programa.\n");
+    scanf ("%f",&d);
+    }
+    return 0;
+}
 int main (void)
 {
     setlocale(LC_ALL, "");
@@ -951,7 +1110,10 @@ int main (void)
         printf("8 - Reajustar salário\n");
         printf("9 - Calcular média das notas\n");
         printf("10 - Soma dos quadrados\n");
-        printf("11 - Informar se números são distintos\n");
+        printf("11 - Informar se  2 números são distintos\n");
+        printf("12 - Informar se os 3 números são distintos\n");
+        printf("13 - Informar se o número é par\n");
+        printf("14 - Informar se o número é par ou impar\n");
         scanf("%d",&escolha);
         system("cls");
 
@@ -984,6 +1146,15 @@ int main (void)
             break;
         case 11:
             numero_diferente();
+            break;
+        case 12:
+            Numeros_diferentes();
+            break;
+        case 13:
+            Par_Impar();
+            break;
+        case 14:
+            triangulo();
             break;
         default:
             printf("\nOpção inválida\n");
