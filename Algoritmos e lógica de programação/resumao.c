@@ -1,4 +1,4 @@
-#define ex9
+#define ex99
 
 #include<stdio.h>
 #include<locale.h>
@@ -288,6 +288,7 @@ int main()
     {
         printf("Aluno reprovado com média de:%.1f", media);
     }
+    return 0;
 }
 
 #endif // ex9
@@ -349,8 +350,45 @@ int main()
 #endif // ex10
 
 #ifdef ex11
-//11.	Escrever um algoritmo que receba dois números e informe ao usuário se eles são iguais ou se são distintos. Se forem distintos informe qual é o maior.
+//11.	Escrever um algoritmo que receba dois números e informe ao usuário se eles são iguais ou se são distintos.
+//Se forem distintos informe qual é o maior.
 
+int main()
+{
+    setlocale(LC_ALL,"");
+
+    int num1, num2;
+    char fim;
+
+    do
+    {
+        printf("Insira o primeiro número:\n");
+        scanf("%d",&num1);
+        printf("Insira o segundo número\n");
+        scanf("%d",&num2);
+        if(num1!=num2)
+        {
+            if(num1>num2)
+            {
+                printf("Números distintos, o maior número é:%d\n", num1);
+                system("pause");
+            }
+            else if(num1<num2)
+            {
+                printf("Números disttintos, o maior número é:%d\n", num2);
+                system("pause");
+            }
+        }
+        else
+        {
+            printf("Os números são iguais.\n\n\n");
+        }
+        printf("Deseja encerrar o programa? tecle 's' para sair ou qualquer tecla para sair...\n\n");
+        getchar();
+        scanf("%c",&fim);
+    }
+    while (fim!='s');
+}
 
 #endif // ex11
 
@@ -859,6 +897,43 @@ int soma_quadrados()
     system("cls");
 }
 
+int numero_diferente()
+{
+    setlocale(LC_ALL,"");
+
+    int num1, num2;
+    char fim;
+
+    do
+    {
+        printf("Insira o primeiro número:\n");
+        scanf("%d",&num1);
+        printf("Insira o segundo número\n");
+        scanf("%d",&num2);
+        if(num1!=num2)
+        {
+            if(num1>num2)
+            {
+                printf("Números distintos, o maior número é:%d\n", num1);
+                system("pause");
+            }
+            else if(num1<num2)
+            {
+                printf("Números disttintos, o maior número é:%d\n", num2);
+                system("pause");
+            }
+        }
+        else
+        {
+            printf("Os números são iguais.\n\n\n");
+        }
+        printf("Deseja encerrar o programa? tecle 's' para sair ou qualquer tecla para sair...\n\n");
+        getchar();
+        scanf("%c",&fim);
+    }
+    while (fim!='s');
+}
+
 int main (void)
 {
     setlocale(LC_ALL, "");
@@ -876,6 +951,7 @@ int main (void)
         printf("8 - Reajustar salário\n");
         printf("9 - Calcular média das notas\n");
         printf("10 - Soma dos quadrados\n");
+        printf("11 - Informar se números são distintos\n");
         scanf("%d",&escolha);
         system("cls");
 
@@ -905,6 +981,9 @@ int main (void)
             media_nota();
         case 10:
             soma_quadrados();
+            break;
+        case 11:
+            numero_diferente();
             break;
         default:
             printf("\nOpção inválida\n");
