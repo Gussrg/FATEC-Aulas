@@ -1,4 +1,4 @@
-#define ex99
+#define ex15
 
 #include<stdio.h>
 #include<locale.h>
@@ -521,11 +521,47 @@ int main (void)
 #endif ex14
 
 #ifdef ex15
-/*Faça um programa que receba o número de horas trabalhadas e o valor do salário mínimo. Calcule e mostre o salário a receber seguindo as regras abaixo:
+/*Faça um programa que receba o número de horas trabalhadas e o valor do salário mínimo.
+Calcule e mostre o salário a receber seguindo as regras abaixo:
 a) a hora trabalhada vale a metade do salário mínimo:
 b) o salário bruto equivale ao número de horas trabalhadas multiplicado pelo valor da hora trabalhada:
 c) o imposto equivale a 3% do salário bruto:
 d) o salário a receber equivale ao salário bruto menos o imposto.*/
+
+int main(void)
+{
+    setlocale(LC_ALL,"");
+    float minimo, horas;
+    char fim;
+
+    do{
+        salario:
+        printf("Entre com o valor atual do salário minimo\n");
+        scanf("%f",&minimo);
+        if(minimo<=0)
+        {
+            printf("\nValor inválido, confira o valor...\n");
+            system("pause");
+            system("cls");
+            goto salario;
+        }
+        hora:
+        printf("\nDigite a quantidade de horas trabalhadas\n");
+        scanf("%f",&horas);
+         if(horas<=0)
+        {
+            printf("\nValor inválido, confira o valor...\n");
+            system("pause");
+            system("cls");
+            goto hora;
+        }
+
+     printf("\nTecle 's' para encerrar o programa ou qualquer tecla para continuar\n");
+     scanf("%c",&fim);
+    }while (fim!='s');
+}
+
+
 
 #endif // ex15
 
