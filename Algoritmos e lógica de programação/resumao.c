@@ -1,4 +1,4 @@
-#define ex15
+#define ex99
 
 #include<stdio.h>
 #include<locale.h>
@@ -534,8 +534,10 @@ int main(void)
     float minimo, horas;
     char fim;
 
-    do{
-        salario:
+    do
+    {
+salario:
+        system("cls");
         printf("Entre com o valor atual do salário minimo\n");
         scanf("%f",&minimo);
         if(minimo<=0)
@@ -545,10 +547,10 @@ int main(void)
             system("cls");
             goto salario;
         }
-        hora:
+hora:
         printf("\nDigite a quantidade de horas trabalhadas\n");
         scanf("%f",&horas);
-         if(horas<=0)
+        if(horas<=0)
         {
             printf("\nValor inválido, confira o valor...\n");
             system("pause");
@@ -556,9 +558,13 @@ int main(void)
             goto hora;
         }
 
-     printf("\nTecle 's' para encerrar o programa ou qualquer tecla para continuar\n");
-     scanf("%c",&fim);
-    }while (fim!='s');
+        printf("O salario a receber é de: %2.f", (horas*(minimo/2))*0.97);
+
+        printf("\nTecle 's' para encerrar o programa ou qualquer tecla para continuar\n");
+        getchar();
+        scanf("%c",&fim);
+    }
+    while (fim!='s');
 }
 
 
@@ -594,44 +600,62 @@ int main (void)
     float peso, altura, d=1;
     setlocale(LC_ALL,"");
 
-    while (d==1){
-    do{
-        printf("Informe seu peso em quilos:\n");
-        scanf("%f", &peso);
-        if (peso<=0){
-            printf( "O peso deve ser positivo.\n\n" );
+    while (d==1)
+    {
+        do
+        {
+            printf("Informe seu peso em quilos:\n");
+            scanf("%f", &peso);
+            if (peso<=0)
+            {
+                printf( "O peso deve ser positivo.\n\n" );
+            }
         }
-    }
-    while (peso<=0);
+        while (peso<=0);
 
-    do{
-        printf("Informe sua altura em metros:\n");
-        scanf("%f", &altura);
-        if (altura<=0){
-            printf( "A altura deve ser positiva.\n\n" );
+        do
+        {
+            printf("Informe sua altura em metros:\n");
+            scanf("%f", &altura);
+            if (altura<=0)
+            {
+                printf( "A altura deve ser positiva.\n\n" );
+            }
         }
-    }
-    while (altura<=0);
+        while (altura<=0);
 
         printf("Seu IMC é igual a:%.2f\n\n", peso/(altura*altura));
 
-    if ((peso/(altura*altura))<17){
-        printf("Você está muito abaixo do peso.\n\n");
-    } else if (peso/(altura*altura)>=17 && peso/(altura*altura)<=18.49){
+        if ((peso/(altura*altura))<17)
+        {
+            printf("Você está muito abaixo do peso.\n\n");
+        }
+        else if (peso/(altura*altura)>=17 && peso/(altura*altura)<=18.49)
+        {
             printf("Você está abaixo do peso.\n\n");
-        } else if ((peso/(altura*altura))>=18.5 && (peso/(altura*altura))<=24.99){
-                printf("Você está no peso normal.\n\n");
-            } else if ((peso/(altura*altura))>=25 && (peso/(altura*altura))<=29.99){
-                    printf("Você está acima do peso.\n\n");
-                } else if ((peso/(altura*altura))>=30 && (peso/(altura*altura))<=34.99){
-                        printf("Você está com obesidade tipo I.\n\n");
-                    } else if ((peso/(altura*altura))>=35 && (peso/(altura*altura))<=39.99){
-                            printf("Você estácom obesidade tipo II.\n\n");
-                        } else{
-                                printf("Você está com obesidade tipo III.");
-                            }
-    printf ("Deseja fazer um novo cálculo? Pressione 1 para continuar ou qualquer outro número para encerrar o programa.\n");
-    scanf ("%f",&d);
+        }
+        else if ((peso/(altura*altura))>=18.5 && (peso/(altura*altura))<=24.99)
+        {
+            printf("Você está no peso normal.\n\n");
+        }
+        else if ((peso/(altura*altura))>=25 && (peso/(altura*altura))<=29.99)
+        {
+            printf("Você está acima do peso.\n\n");
+        }
+        else if ((peso/(altura*altura))>=30 && (peso/(altura*altura))<=34.99)
+        {
+            printf("Você está com obesidade tipo I.\n\n");
+        }
+        else if ((peso/(altura*altura))>=35 && (peso/(altura*altura))<=39.99)
+        {
+            printf("Você estácom obesidade tipo II.\n\n");
+        }
+        else
+        {
+            printf("Você está com obesidade tipo III.");
+        }
+        printf ("Deseja fazer um novo cálculo? Pressione 1 para continuar ou qualquer outro número para encerrar o programa.\n");
+        scanf ("%f",&d);
 
     }
     return 0;
@@ -647,47 +671,62 @@ salário fixo de um funcionário. Mostre o sexo, a idade e o salário obtido após o
 #include <locale.h>
 #include <math.h>
 
-int main(void){
-setlocale(LC_ALL, "");
-float salario;
-int idade;
-char sexo, fim;
+int main(void)
+{
+    setlocale(LC_ALL, "");
+    float salario;
+    int idade;
+    char sexo, fim;
 
-do
+    do
     {
-        do{
+        do
+        {
             printf ("Digite a idade:\n");
             scanf ("%d", &idade);
-            if (idade<=0){
+            if (idade<=0)
+            {
                 printf ("A idade deve ser positiva\n");
             }
-        }while (idade<=0);
+        }
+        while (idade<=0);
 
-        do{
+        do
+        {
             printf ("Digite o salário:\n");
             scanf ("%f", &salario);
-            if (salario<=0){
+            if (salario<=0)
+            {
                 printf ("O salário deve ser positivo.\n");
             }
-        } while (salario<=0);
+        }
+        while (salario<=0);
 
         printf ("Digite M se você for do sexo masculino e F se você for do sexo feminino.\n");
         scanf ("%c", &sexo);
         sexo=getchar();
 
-        if (sexo=='M' || sexo=='m'&& idade>=30){
+        if (sexo=='M' || sexo=='m'&& idade>=30)
+        {
             printf ("Sexo: masculino.\nIdade: %i.\nSalário com abono: %.2f.\n", idade, salario+200);
-        } else if (sexo=='M' || sexo=='m' && idade<30){
-                printf ("Sexo: masculino.\nIdade: %i.\nSalário com abono: %.2f.\n", idade, salario+120);
-            } else if (sexo=='F' || sexo=='f' && idade>=30){
-                    printf ("Sexo: feminino.\nIdade: %i.\nSalário com abono: %.2f.\n", idade, salario+220);
-                } else if (sexo=='F' || sexo=='f' && idade<30){
-                    printf ("Sexo: feminino.\nIdade: %i.\nSalário com abono: %.2f.\n", idade, salario+130);
-                }
-            printf ("Deseja fazer um novo cálculo? tecle S para continuar ou qualquer outra tecla para encerrar o programa.\n");
-            getchar();
-            scanf ("%c",&fim);
-    }while (fim=='s');
+        }
+        else if (sexo=='M' || sexo=='m' && idade<30)
+        {
+            printf ("Sexo: masculino.\nIdade: %i.\nSalário com abono: %.2f.\n", idade, salario+120);
+        }
+        else if (sexo=='F' || sexo=='f' && idade>=30)
+        {
+            printf ("Sexo: feminino.\nIdade: %i.\nSalário com abono: %.2f.\n", idade, salario+220);
+        }
+        else if (sexo=='F' || sexo=='f' && idade<30)
+        {
+            printf ("Sexo: feminino.\nIdade: %i.\nSalário com abono: %.2f.\n", idade, salario+130);
+        }
+        printf ("Deseja fazer um novo cálculo? tecle S para continuar ou qualquer outra tecla para encerrar o programa.\n");
+        getchar();
+        scanf ("%c",&fim);
+    }
+    while (fim=='s');
     return 0;
 }
 #endif ex20
@@ -1129,6 +1168,170 @@ int triangulo()
     }
     return 0;
 }
+
+int salario_bruto(void)
+{
+    setlocale(LC_ALL,"");
+    float minimo, horas;
+    char fim;
+
+    do
+    {
+salario:
+        system("cls");
+        printf("Entre com o valor atual do salário minimo\n");
+        scanf("%f",&minimo);
+        if(minimo<=0)
+        {
+            printf("\nValor inválido, confira o valor...\n");
+            system("pause");
+            system("cls");
+            goto salario;
+        }
+hora:
+        printf("\nDigite a quantidade de horas trabalhadas\n");
+        scanf("%f",&horas);
+        if(horas<=0)
+        {
+            printf("\nValor inválido, confira o valor...\n");
+            system("pause");
+            system("cls");
+            goto hora;
+        }
+
+        printf("O salario a receber é de: %2.f", (horas*(minimo/2))*0.97);
+
+        printf("\nTecle 's' para encerrar o programa ou qualquer tecla para continuar\n");
+        getchar();
+        scanf("%c",&fim);
+    }
+    while (fim!='s');
+}
+
+int imc (void)
+{
+    float peso, altura, d=1;
+    setlocale(LC_ALL,"");
+
+    while (d==1)
+    {
+        do
+        {
+            printf("Informe seu peso em quilos:\n");
+            scanf("%f", &peso);
+            if (peso<=0)
+            {
+                printf( "O peso deve ser positivo.\n\n" );
+            }
+        }
+        while (peso<=0);
+
+        do
+        {
+            printf("Informe sua altura em metros:\n");
+            scanf("%f", &altura);
+            if (altura<=0)
+            {
+                printf( "A altura deve ser positiva.\n\n" );
+            }
+        }
+        while (altura<=0);
+
+        printf("Seu IMC é igual a:%.2f\n\n", peso/(altura*altura));
+
+        if ((peso/(altura*altura))<17)
+        {
+            printf("Você está muito abaixo do peso.\n\n");
+        }
+        else if (peso/(altura*altura)>=17 && peso/(altura*altura)<=18.49)
+        {
+            printf("Você está abaixo do peso.\n\n");
+        }
+        else if ((peso/(altura*altura))>=18.5 && (peso/(altura*altura))<=24.99)
+        {
+            printf("Você está no peso normal.\n\n");
+        }
+        else if ((peso/(altura*altura))>=25 && (peso/(altura*altura))<=29.99)
+        {
+            printf("Você está acima do peso.\n\n");
+        }
+        else if ((peso/(altura*altura))>=30 && (peso/(altura*altura))<=34.99)
+        {
+            printf("Você está com obesidade tipo I.\n\n");
+        }
+        else if ((peso/(altura*altura))>=35 && (peso/(altura*altura))<=39.99)
+        {
+            printf("Você estácom obesidade tipo II.\n\n");
+        }
+        else
+        {
+            printf("Você está com obesidade tipo III.");
+        }
+        printf ("Deseja fazer um novo cálculo? Pressione 1 para continuar ou qualquer outro número para encerrar o programa.\n");
+        scanf ("%f",&d);
+
+    }
+    return 0;
+}
+
+int abono(void)
+{
+    setlocale(LC_ALL, "");
+    float salario;
+    int idade;
+    char sexo, fim;
+
+    do
+    {
+        do
+        {
+            printf ("Digite a idade:\n");
+            scanf ("%d", &idade);
+            if (idade<=0)
+            {
+                printf ("A idade deve ser positiva\n");
+            }
+        }
+        while (idade<=0);
+
+        do
+        {
+            printf ("Digite o salário:\n");
+            scanf ("%f", &salario);
+            if (salario<=0)
+            {
+                printf ("O salário deve ser positivo.\n");
+            }
+        }
+        while (salario<=0);
+
+        printf ("Digite M se você for do sexo masculino e F se você for do sexo feminino.\n");
+        scanf ("%c", &sexo);
+        sexo=getchar();
+
+        if (sexo=='M' || sexo=='m'&& idade>=30)
+        {
+            printf ("Sexo: masculino.\nIdade: %i.\nSalário com abono: %.2f.\n", idade, salario+200);
+        }
+        else if (sexo=='M' || sexo=='m' && idade<30)
+        {
+            printf ("Sexo: masculino.\nIdade: %i.\nSalário com abono: %.2f.\n", idade, salario+120);
+        }
+        else if (sexo=='F' || sexo=='f' && idade>=30)
+        {
+            printf ("Sexo: feminino.\nIdade: %i.\nSalário com abono: %.2f.\n", idade, salario+220);
+        }
+        else if (sexo=='F' || sexo=='f' && idade<30)
+        {
+            printf ("Sexo: feminino.\nIdade: %i.\nSalário com abono: %.2f.\n", idade, salario+130);
+        }
+        printf ("Deseja fazer um novo cálculo? tecle S para continuar ou qualquer outra tecla para encerrar o programa.\n");
+        getchar();
+        scanf ("%c",&fim);
+    }
+    while (fim=='s');
+    return 0;
+}
 int main (void)
 {
     setlocale(LC_ALL, "");
@@ -1150,6 +1353,9 @@ int main (void)
         printf("12 - Informar se os 3 números são distintos\n");
         printf("13 - Informar se o número é par\n");
         printf("14 - Informar se o número é par ou impar\n");
+        printf("15 - Calcular salário com desconto de imposto\n");
+        printf("18 - Calcular IMC\n");
+        printf("19 - Calcular abono salárial\n");
         scanf("%d",&escolha);
         system("cls");
 
@@ -1191,6 +1397,15 @@ int main (void)
             break;
         case 14:
             triangulo();
+            break;
+        case 15:
+            salario_bruto();
+            break;
+        case 18:
+            imc();
+            break;
+        case 19:
+            abono();
             break;
         default:
             printf("\nOpção inválida\n");
