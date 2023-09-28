@@ -572,10 +572,32 @@ hora:
 #endif // ex15
 
 #ifdef ex16
-Cada degrau de uma escada tem X de altura.
-Faça um programa que receba essa altura e a altura que o usuário deseja subindo a escada.
-Calcule e mostre quantos degraus o usuário deverá subir para atingir seu objetivo, sem se preocupar com a altura do usuário.
 
+
+int main()
+{
+    /*Cada degrau de uma escada tem X de altura.
+    Faça um programa que receba essa altura e a altura que o usuário deseja subindo a escada.
+    Calcule e mostre quantos degraus o usuário deverá subir para atingir seu objetivo, sem se preocupar com a altura do usuário.*/
+
+    setlocale(LC_ALL,"");
+    float degrau, h;
+    char fim;
+
+    do
+    {
+        printf("Entre com a altura do degrau em centimetros.\n");
+        scanf("%f",&degrau);
+        printf("Entre com a altura que deseja subir em metros.\n");
+        scanf("%f",&h);
+        printf("A quantidade de degraus que será necessária é de %.f\n", h/(degrau/100));
+
+        printf("\nTecle 's' para encerrar o programa ou qualquer tecla para continuar\n");
+        getchar();
+        scanf("%c",&fim);
+    }
+    while (fim!='s');
+}
 #endif // ex16
 
 #ifdef ex17
@@ -1208,6 +1230,30 @@ hora:
     while (fim!='s');
 }
 
+int degrau()
+{
+    /*Cada degrau de uma escada tem X de altura.
+    Faça um programa que receba essa altura e a altura que o usuário deseja subindo a escada.
+    Calcule e mostre quantos degraus o usuário deverá subir para atingir seu objetivo, sem se preocupar com a altura do usuário.*/
+
+    setlocale(LC_ALL,"");
+    float degrau, h;
+    char fim;
+
+    do
+    {
+        printf("Entre com a altura do degrau em centimetros.\n");
+        scanf("%f",&degrau);
+        printf("Entre com a altura que deseja subir em metros.\n");
+        scanf("%f",&h);
+        printf("A quantidade de degraus que será necessária é de %.f\n", h/(degrau/100));
+
+        printf("\nTecle 's' para encerrar o programa ou qualquer tecla para continuar\n");
+        getchar();
+        scanf("%c",&fim);
+    }
+    while (fim!='s');
+}
 int imc (void)
 {
     float peso, altura, d=1;
@@ -1276,6 +1322,9 @@ int imc (void)
 
 int abono(void)
 {
+    /*19.Faça um algoritmo que receba o a idade, o sexo (1 para masculino e 2 para feminino) e
+salário fixo de um funcionário. Mostre o sexo, a idade e o salário obtido após o acréscimo de abono:*/
+
     setlocale(LC_ALL, "");
     float salario;
     int idade;
@@ -1354,6 +1403,7 @@ int main (void)
         printf("13 - Informar se o número é par\n");
         printf("14 - Informar se o número é par ou impar\n");
         printf("15 - Calcular salário com desconto de imposto\n");
+        printf("16 - Calcular quantidaded de degraus\n");
         printf("18 - Calcular IMC\n");
         printf("19 - Calcular abono salárial\n");
         scanf("%d",&escolha);
@@ -1400,6 +1450,9 @@ int main (void)
             break;
         case 15:
             salario_bruto();
+            break;
+        case 16:
+            degrau();
             break;
         case 18:
             imc();
