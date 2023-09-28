@@ -601,9 +601,12 @@ int main()
 #endif // ex16
 
 #ifdef ex17
-/*17.	Faça um programa que receba a altura e o sexo de uma pessoa e que calcule e mostre o seu peso ideal, utilizando as seguintes fórmulas:
+int Peso_ideal(void)
+{
+ /*17.	Faça um programa que receba a altura e o sexo de uma pessoa e que calcule e mostre o seu peso ideal, utilizando as seguintes fórmulas:
 a.	Para homens (72 * h) – 58
 b.	Para mulheres (62,1* h) – 44.7*/
+}
 
 #endif // ex17
 
@@ -1254,6 +1257,26 @@ int degrau()
     }
     while (fim!='s');
 }
+
+int Peso_ideal(void)
+{
+ /*17.	Faça um programa que receba a altura e o sexo de uma pessoa e que calcule e mostre o seu peso ideal, utilizando as seguintes fórmulas:
+a.	Para homens (72 * h) – 58
+b.	Para mulheres (62,1* h) – 44.7*/
+
+float h, homem, mulher;
+
+printf("Entre com sua altura em metros:");
+scanf("%f",&h);
+
+homem=72*h -58;
+mulher=62.1*h-44.7;
+printf("O peso ideal é de %.1f se for homem ou de %.1f se for mulher \n", homem ,mulher );
+
+return 0;
+}
+
+
 int imc (void)
 {
     float peso, altura, d=1;
@@ -1404,6 +1427,7 @@ int main (void)
         printf("14 - Informar se o número é par ou impar\n");
         printf("15 - Calcular salário com desconto de imposto\n");
         printf("16 - Calcular quantidaded de degraus\n");
+        printf("17 - informar peso ideal\n");
         printf("18 - Calcular IMC\n");
         printf("19 - Calcular abono salárial\n");
         scanf("%d",&escolha);
@@ -1453,6 +1477,9 @@ int main (void)
             break;
         case 16:
             degrau();
+            break;
+        case 17:
+            Peso_ideal();
             break;
         case 18:
             imc();
