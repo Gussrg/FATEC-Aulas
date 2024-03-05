@@ -24,5 +24,21 @@ public class Moeda {
 			System.out.println(valor +"reais");
 			break;
 		}
+		
+		void converterBTC() {
+			switch(correncia) {
+			case USD:
+				System.out.println(0.000015*valor + "BTC");
+				break;
+			case BTC:
+				System.out.println(valor +"BTC");
+				break;
+			case EUR:
+				System.out.println(0.000016*valor +"BTC");
+				break;
+			case BRL:
+				System.out.println(0.0000030*valor +"BTC");
+				break;
+			}
 	}
 }
