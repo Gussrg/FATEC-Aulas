@@ -3,7 +3,7 @@
 
 **Conteúdo feito durante o curso, nas matérias:**
 
-- Lógica de programação
+- Algoritmos e Lógica de programação
 
 - Laboratório de Hardware
 
@@ -11,4 +11,4 @@
 
 - Programação Orientada a objetos
 
-- Engenharia de Software
+- Engenharia de Software III
