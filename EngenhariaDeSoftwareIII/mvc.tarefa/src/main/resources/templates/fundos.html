@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>view fundos</title>
+
+</head>
+<body>
+<h1>Lista de fundos</h1>
+<hr>
+<table>
+    <thead>
+    <tr>
+        <th>Fundo</th>
+        <th>Tipo</th>
+        <th>Qt</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="fundo:${fundos}">
+        <td th:text="${fundo.ticker}">Ticker</td>
+        <td th:text="${fundo.tipo}">Tipo</td>
+        <td th:text="${fundo.quantidade}">Quantidade</td>
+    </tr>
+    </tbody>
+</body>
+</html>
