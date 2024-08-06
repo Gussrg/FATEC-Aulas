@@ -9,10 +9,13 @@ public class Main {
         c.latir();
         c.mostrarRaca();
         */
-        Aluno a = new Aluno();
+        
+        Aluna a = new Aluna();
         a.nome = "Luna";
-        a.cpf = "12345678900"
-        a.idade = "30"
+        a.cpf = "12345678900";
+        a.idade = 30;
+        a.dadosAluno();
+       
     }
     
 }

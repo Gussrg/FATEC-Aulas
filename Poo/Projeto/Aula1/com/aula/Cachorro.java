@@ -1,7 +1,7 @@
 package com.aula;
 
 
-public class Cachorro{
+/*public class Cachorro{
     
     String nome, raca;
     
@@ -13,3 +13,4 @@ public class Cachorro{
         System.out.println("Raça" + raca);
     }
 }
+*/
