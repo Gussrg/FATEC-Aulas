@@ -15,7 +15,7 @@ public class Main {
         a.cpf = "12345678900";
         a.idade = 30;
         a.dadosAluno();
-       
+            
     }
     
 }
