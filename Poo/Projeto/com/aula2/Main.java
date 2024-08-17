@@ -14,8 +14,7 @@ public class Main {
         System.out.println("o perimetro é: " + q.calcularPerimetro());
       
 
-        Revolver t = new Revolver(2,5
-        );
+        Revolver t = new Revolver(2,5 );
         // t.qtMaxima = 5;
         t.mostrarBalas();
         t.recarregar();
