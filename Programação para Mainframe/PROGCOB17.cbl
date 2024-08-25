@@ -1,0 +1,54 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. PROGCOB17.
+      ***************************
+      *AREA DE COMENTARIOS - REMARKS
+      *AUTHOR = GUSTAVO REBELO
+      *OBJETIVO: RECEBER E IMPRIMIR A DATA DO SISTEMA
+      *UTILIZAR VARIAVEL TIPO TABELA - REDEFINES
+      *DATA = 25/08/2024
+      ***************************
+       ENVIRONMENT DIVISION.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 WRK-MESES-EXTENSO.
+           02 FILLER PIC X(03) VALUE 'JAN'.
+           02 FILLER PIC X(03) VALUE 'FEV'.
+           02 FILLER PIC X(03) VALUE 'MAR'.
+           02 FILLER PIC X(03) VALUE 'ABR'.
+           02 FILLER PIC X(03) VALUE 'MAI'.
+           02 FILLER PIC X(03) VALUE 'JUN'.
+           02 FILLER PIC X(03) VALUE 'JUL'.
+           02 FILLER PIC X(03) VALUE 'AGO'.
+           02 FILLER PIC X(03) VALUE 'SET'.
+           02 FILLER PIC X(03) VALUE 'OUT'.
+           02 FILLER PIC X(03) VALUE 'NOV'.
+           02 FILLER PIC X(03) VALUE 'DEZ'.
+       01 WRK-MESES REDEFINES WRK-MESES-EXTENSO.
+           02 WRK-MES PIC X(3) OCCURS 12 TIMES.
+
+           01 WRK-DATA.
+           02 WRK-ANOSYS PIC 9(04) VALUE ZEROS.
+           02 WRK-MESSYS PIC 9(02) VALUE ZEROS.
+           02 WRK-DIASYS PIC 9(02) VALUE ZEROS.
+
+       PROCEDURE DIVISION.
+           ACCEPT WRK-DATA FROM DATE YYYYMMDD.
+           PERFORM 0400-MONTAMES.
+           DISPLAY 'DATA: ' WRK-DIASYS ' DE 'WRK-MES(WRK-MESSYS)
+                               ' DE ' WRK-ANOSYS.
+
+           STOP RUN.
+
+       0400-MONTAMES.
+           MOVE 'JANEIRO'   TO WRK-MES(01).
+           MOVE 'FEVEREIRO' TO WRK-MES(02).
+           MOVE 'MARCO'     TO WRK-MES(03).
+           MOVE 'ABRIL'     TO WRK-MES(04).
+           MOVE 'MAIO'      TO WRK-MES(05).
+           MOVE 'JUNHO'     TO WRK-MES(06).
+           MOVE 'JULHO'     TO WRK-MES(07).
+           MOVE 'AGOSTO'    TO WRK-MES(08).
+           MOVE 'SETEMBRO'  TO WRK-MES(09).
+           MOVE 'OUTUBRO'   TO WRK-MES(10).
+           MOVE 'NOVEMBRO'  TO WRK-MES(11).
+           MOVE 'DEZEMBRO'  TO WRK-MES(12).
