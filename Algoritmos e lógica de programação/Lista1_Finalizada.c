@@ -1,4 +1,4 @@
-#define ex99
+#define ex1
 
 #include<stdio.h>
 #include<locale.h>
