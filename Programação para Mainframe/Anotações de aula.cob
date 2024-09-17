@@ -1,15 +1,23 @@
       ******************************************
-      *
+      *IDENTIFICATION DIVISION É OBRIGATÓRIO
        IDENTIFICATION DIVISION.
         PROGRAM-ID. ANOTAR_AULA.
-        AUTHOR.
+        AUTHOR. GUSTAVO.
+        DATE-WRITTEN. 14/09/2024.
+        REMARKS. COMENTARIOS DIVERSOS.
       *******************************************
        ENVIRONMENT DIVISION.
         CONFIGURATION SECTION.
          SPECIAL-NAMES.
           DECIMAL-POINT IS COMMA.
+        INPUT-OUTPUT SECTION.
+         FILE-CONTROL.
        DATA DIVISION.
-        WORKING-STORAGE.
+        WORKING-STORAGE SECTION.
+
+        77 WRK-NUMERO     PIC 9(003) VALUE ZEROES.
+        77 WRK-CARATCTERE PIC X(003) VALUE SPACES.
+
 
        PROCEDURE DIVISION.
 
