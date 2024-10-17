@@ -1,3 +1,5 @@
+//Gustavo Rebelo Godoy
+
 #include<stdio.h>
 #include<locale.h>
 #include<stdlib.h>
@@ -215,7 +217,8 @@ int main(){
         int n1, n2, n3;
         char sair;
 
-        do{ system("cls");
+        do{
+            system("cls");
             do{
                 printf("Digite o tamanho de um lado de um triângulo:");
                 scanf("%d", &n1);

@@ -23,8 +23,8 @@
 
        0001-PRINCIPAL.
            PERFORM 0100-INICIALIZAR.
-           IF WRK-NUMERO > O
-               PERFORM 0200-PROCESSAR
+           IF WRK-NUMERO > 0
+               PERFORM 0200-PROCESSAR.
            PERFORM 0400-FINALIZAR.
 
            STOP RUN.
