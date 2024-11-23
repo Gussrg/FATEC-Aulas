@@ -151,9 +151,55 @@ b)	Função MED_5: calcule a média dos números que são múltiplos de cinco. Exiba e
 c)	Função INVERTE: armazene no vetor inverte_A os números armazenados no vetor A em ordem inversa. Exiba separadamente o conteúdo de cada vetor.
 d)	Função Menor_Num: verifique o menor número encontrado no vetor A e exiba no interior da função main.
 */
+int A[7];
+int Menor_num()
+{
 
+}
+int Inverte()
+{
+    int aux, inverte_A[7];
 
+    if()
 
+}
+int MED_5()
+{
+    int cont;
+    for(cont=0; cont<7; cont++)
+    {
+        if(A[cont] % 5 == 0)
+        {
+            printf("\nÉ Divisivel por 5: %d\n",A[cont]);
+        }
+    }
+}
+int Armazena()
+{
+    int cont;
+
+    for(cont=0; cont<7; cont++)
+    {
+        do
+        {
+            printf("Digite um número\n");
+            scanf("%d", &A[cont]);
+            if(A[cont]<0)
+            {
+                printf("o número deve ser positivo\n");
+            }
+        }
+        while(A[cont]<0);
+    }
+}
+int main()
+{
+    setlocale(LC_ALL,"");
+    Armazena();
+    MED_5();
+    Inverte();
+
+}
 
 #endif // ex03
 

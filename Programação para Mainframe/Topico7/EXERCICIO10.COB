@@ -1,0 +1,73 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. PROG10.
+
+       ENVIRONMENT DIVISION.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+       01 WS-VARIAVEIS.
+           05 WS-NUMERO       PIC 9(4).
+           05 WS-RESPOSTA     PIC X VALUE SPACE.
+           05 WS-I            PIC 9(2).
+           05 WS-J            PIC 9(2).
+           05 WS-TEMP         PIC 9(4).
+           05 WS-EH-PRIMO     PIC X VALUE 'N'.
+           05 WS-PRIMOS       PIC 9(4) OCCURS 5 TIMES VALUE ZEROS.
+           05 WS-IDX          PIC 9(2).
+
+       PROCEDURE DIVISION.
+       MAIN-PROCEDURE.
+           PERFORM INICIO-PROGRAMA UNTIL WS-RESPOSTA = 'N'
+                    OR WS-RESPOSTA = 'n'
+           STOP RUN.
+
+       INICIO-PROGRAMA.
+           DISPLAY "Digite um número: "
+           ACCEPT WS-NUMERO
+
+           PERFORM CALCULA-PRIMOS
+           PERFORM MOSTRA-PRIMOS
+
+           DISPLAY "Deseja continuar? (S/N): "
+           ACCEPT WS-RESPOSTA.
+
+       CALCULA-PRIMOS.
+           MOVE WS-NUMERO TO WS-TEMP
+           MOVE 0 TO WS-I
+           PERFORM UNTIL WS-I = 5
+               ADD 1 TO WS-TEMP
+               PERFORM VERIFICA-PRIMO
+               IF WS-EH-PRIMO = 'S'
+                   ADD 1 TO WS-I
+                   MOVE WS-TEMP TO WS-PRIMOS(WS-I)
+               END-IF
+           END-PERFORM.
+
+       VERIFICA-PRIMO.
+           MOVE 'S' TO WS-EH-PRIMO
+           IF WS-TEMP < 2
+               MOVE 'N' TO WS-EH-PRIMO
+               EXIT PARAGRAPH
+           END-IF
+
+           PERFORM VARYING WS-J FROM 2 BY 1 UNTIL WS-J >
+                   FUNCTION SQRT(WS-TEMP)
+               IF FUNCTION MOD(WS-TEMP, WS-J) = 0
+                   MOVE 'N' TO WS-EH-PRIMO
+                   EXIT PARAGRAPH
+               END-IF
+           END-PERFORM.
+
+       MOSTRA-PRIMOS.
+           DISPLAY "Primos em ordem crescente:"
+           PERFORM VARYING WS-IDX FROM 1 BY 1 UNTIL WS-IDX > 5
+               DISPLAY WS-PRIMOS(WS-IDX)
+           END-PERFORM
+
+           DISPLAY "Primos em ordem decrescente:"
+           PERFORM VARYING WS-IDX FROM 5 BY -1 UNTIL WS-IDX < 1
+               DISPLAY WS-PRIMOS(WS-IDX)
+           END-PERFORM.
+           STOP RUN.
+
+       END PROGRAM PROG10.
