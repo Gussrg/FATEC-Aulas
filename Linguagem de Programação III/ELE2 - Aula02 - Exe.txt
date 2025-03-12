@@ -1,0 +1,10 @@
+Ex. 1: Faça um novo projeto chamado "Aula02_02". Nele deverá haver a classe "Principal" (no pacote "view") e as seguintes classes no pacote "business":
+- "Animal" (abstrata), com os atributos "nome" (obrigatório no construtor), "peso" e "idade", além do método "brincar()";
+- "Cachorro", derivada de "Animal", com o método "latir()", no qual deverá ser exibida uma mensagem representando o latido do cachorro;
+- "Gato", derivada de "Animal", com o método "miar()", no qual deverá ser exibida uma mensagem representando o miado do gato.
+
+As classes Cachorro e Gato deverão sobrescrever o método "brincar()", informando, em cada "override", de que forma cada tipo de animal mais gosta de brincar.
+
+Na classe Principal, instancie objetos aleatórios das classes Gato e Cachorro (2 ou 3 objetos para cada classe), colocando valores em cada um de seus atributos e executando todos os seus respectivos comportamentos. Considere como exibir os valores dos atributos de cada animal.
+
+PS: a ideia é simular como se fosse um local onde os animais pudessem brincar (espécie de playground para pets).

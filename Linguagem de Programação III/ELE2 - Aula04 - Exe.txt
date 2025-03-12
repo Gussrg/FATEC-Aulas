@@ -1,0 +1,29 @@
+Ex. 1 - ("Aula04_01"):
+- reescrever o exercício "Aula03_01" ("Calculadora"), agora aplicando os conceitos de upcasting e/ou downcasting.
+
+
+Ex. 2 - ("Aula04_02"):
+- crie uma primeira classe chamada Principal (onde terá a função "main"; pacote: "view");
+
+- elabore uma segunda classe chamada Veiculo (abstrata) que deverá ficar num pacote chamado "business". Nela, deverão existir os atributos "modelo", "fabricante", "ano" e "velocidadeAtual". Além disso, deverão existir os métodos "acelerar", "desacelerar" e "parar", onde a velocidade sofrerá, respectivamente, o acréscimo de 5km/h, o decréscimo de 5km/h e a atribuição de 0km/h (desaceleração total);
+
+- desenvolva uma terceira classe chamada Carro, que seja subclasse de Veiculo. Nela, inclua o atributo "quantidadePortas" (que deverá ser alimentado pelo usuário) e faça um polimorfismo do método "acelerar", de modo a aumentar a velocidade de 10km/h em 10km/h (não mais de 5km/h em 5km/h);
+
+- crie uma quarta classe chamada Moto, também subclasse de Veiculo; ela deverá ter o atributo "descansoAcionado" (booleano) e um polimorfismo do método "acelerar", outro do método "desacelerar" e outro para método "parar": quando a velocidade for igual a 0, o atributo "descansoAcionado" deverá ser verdadeiro; quando a velocidade for maior que 0, o atributo deverá ir para falso;
+
+- na classe Principal, permita ao usuário selecionar qual tipo de veículo ele quer utilizar (carro ou moto) e instancie o que for correspondente;
+
+- aumente e diminua as velocidades a seu bel prazer, sempre exibindo a velocidade a cada alteração (considere criar um método para exibir essas informações);
+
+- (opcional) se preferir incrementar mais o exercício, permita ao usuário escolher quando acelerar e desacelarar.
+
+
+Requisitos adicionais:
+- utilize um construtor não-default na classe Veiculo no seguinte formato: 
+      public Veiculo(String modelo, String fabricante, int ano);
+
+- implemente o encapsulamento (getters e setters) de modo que o valor da velocidade não possa ser alterado por alguma classe externa (alheia à regra de negócio), devendo ser alterada, apenas, pelos métodos de negócio ("acelerar", "desacelerar" e "parar");
+
+- limite a faixa de velocidade dos veículos entre 0km/h a 180km/h.
+
+- utilize os conceitos de downcasting e/ou upcasting obrigatoriamente na classe Principal.
