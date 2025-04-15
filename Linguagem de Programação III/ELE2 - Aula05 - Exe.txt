@@ -1,0 +1,24 @@
+Ex. 1 - Usando o exercício sobre Veículos da aula anterior ("Aula04_02") como base, crie um novo projeto ("Aula05_02") para cumprir os seguintes requisitos:
+
+- crie uma nova classe chamada Motor, que deve ser associada a Carro e Moto usando composição. Esta classe deve ter os atributos "potencia" (valores de 50 a 500) e "tipo" (String), que deverão ser recebidos via construtor, além de sobrescrita do método "toString" para exibir suas características (potência e tipo).
+
+- crie uma nova classe chamada Manutencao, que deve ser associada a Carro e Moto (via agregação). Esta classe deve ter os atributos "dataUltimaManutencao" (String) e "tipoServico" (String), que deverão receber valores via construtor e exibi-los via sobrescrita do método "toString" (para exibir informações sobre a manutenção).
+
+Altere as classes do exercício anterior (Carro, Moto, Veiculo e/ou Principal), de modo a poder utilizar as novas classes Motor e Manutencao e, assim, ter mais informações sobre os veículos disponíveis.
+
+
+
+Ex. 2 - Crie um pequeno projeto ("Aula05_03") para controlar uma aula, com todas as entidades envolvidas nela. O projeto deve ter, ao menos, as seguintes classes:
+- Professor (nome, email e registro);
+- Aluno (nome, email e matrícula);
+- Disciplina (codigo, ementa);
+- Materia (topico, descricao);
+- Aula (Professor, Aluno[], Disciplina, Materia);
+- Principal (onde deverá ter a função "main").
+
+Após desenvolver todas as classes e seus atributos, instancie os objetos necessários (na classe Principal) a fim de que seja possível armazenar e apresentar, através de uma instância da classe Aula, todas as informações pertinentes à aula de uma disciplina qualquer, na qual haja, ao menos, 5 alunos. Em seguida, exiba todas as informações armazenadas (código da disciplina, nome do professor, tópico da matéria e listagem de alunos presentes - apenas nome).
+
+Notas:
+- para armazenar vários alunos, pesquise sobre a classe "ArrayList"; 
+- para percorrer o array, utilize o comando "foreach" ==> "for (Object o: lst)"; 
+- sinta-se livre para utilizar o conceito de herança envolvendo as classes Professor e Aluno, bem como, eventualmente, upcasting e/ou downcasting.

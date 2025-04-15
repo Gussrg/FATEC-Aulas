@@ -6,46 +6,37 @@ import business.Quadrado;
 public class Principal {
 
 	public static void main(String[] args) {
-		/*** UPCASTING ***/
-		// instancia objeto da classe filha
+		// *** UPCASTING ***
 		Quadrado quadradoUp = new Quadrado();
 		quadradoUp.setLado(5);
 		// ...
-		// bloco para representar hipotéticas linhas de código com regras diversas...
+		// linhas comentadas para representar uma lógica ou regra 
+		// de negócio que trouxesse a necessidade de um upcasting
 		// ...
 		
-		// via atribuição direta (casting implícito), atribui instância do objeto 
-		// da classe filha para gerar objeto da classe pai (upcasting)
+		// atribuição direta (casting implícito) do tipo
+		// da classe filha para gerar objeto da classe pai
 		Figura figuraUp = quadradoUp;
+		// executa método no objeto da pai e exibe o resultado
 		System.out.println(String.format(
-				"[Upcasting] Área da figura: %.2f cm².", figuraUp.calcularArea()));
+				"[Upcasting] Área da figura: %.2f cm².",
+					figuraUp.calcularArea()));
 		
-		/*** DOWNCASTING ***/
-		Figura figuraDown = new Quadrado(); // especificamente nesta linha ocorre, também, um upcasting
+		// *** DOWNCASTING ***
+		Figura figuraDown = new Quadrado(); // aqui ocorre um upcasting
 		// ...
-		// bloco para representar hipotéticas linhas de código com regras diversas...
+		// linhas comentadas para representar uma lógica ou regra  
+		// de negócio que trouxesse a necessidade de um downcasting
 		// ...
 		
-		// via atribuição indireta (casting explícito), atribui instância do objeto 
-		// da classe pai para gerar objeto da classe filha (downcasting)
-		Quadrado quadradoDown = (Quadrado) figuraDown;
-
+		// atribuição indireta (casting explícito) do tipo
+		// da classe pai para gerar objeto da classe filha
+		Quadrado quadradoDown = (Quadrado)figuraDown;
 		quadradoDown.setLado(6);
+		// executa método no objeto da filha e exibe o resultado
 		System.out.println(String.format(
-				"[Downcasting] Área do quadrado: %.2f cm².", quadradoDown.calcularArea()));
+				"[Downcasting] Área do quadrado: %.2f cm².",
+					quadradoDown.calcularArea()));
+		
 	}
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
-

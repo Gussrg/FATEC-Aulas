@@ -1,5 +1,5 @@
 package business;
 
 public interface ICalculo {
-	void calcular(); 
+	void calcular();
 }

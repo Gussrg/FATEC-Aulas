@@ -4,6 +4,8 @@ public class Carro extends Veiculo {
 
 	private int quantidadePortas;
 	
+//	public int getQuantidadePortas() { return quantidadePortas;}
+	
 	public Carro(String modelo, String fabricante, int ano, int quantidadePortas) {
 		super(modelo, fabricante, ano);
 		this.quantidadePortas = quantidadePortas;
@@ -12,14 +14,12 @@ public class Carro extends Veiculo {
 	@Override
 	public void acelerar() {
 		velocidadeAtual += 10;
+		controlarVelocidadeMaxima();
 	}
 
 	@Override
 	public String toString() {
-		return super.toString() + 
-			String.format("; %d portas", quantidadePortas);
+		return super.toString() + "; qtde portas: " + quantidadePortas;
 	}
-	
-	
 	
 }

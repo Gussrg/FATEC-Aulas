@@ -2,10 +2,10 @@ package business;
 
 public class Moto extends Veiculo {
 
-	private boolean descansoAcionado;
+	private boolean descansoAcionado = true;
 	
 	public boolean isDescansoAcionado() { return descansoAcionado; }
-	
+
 	public Moto(String modelo, String fabricante, int ano) {
 		super(modelo, fabricante, ano);
 	}
@@ -19,9 +19,16 @@ public class Moto extends Veiculo {
 	@Override
 	public void desacelerar() {
 		super.desacelerar();
-		// atribui o retorno da validação (se a 
-		// velocidade é 0, o apoio tem de estar acionado)  
 		descansoAcionado = (velocidadeAtual == 0);
+		
+		// operador ternário
+//		descansoAcionado = (velocidadeAtual == 0) ? true : false; 
+		
+//		if (velocidadeAtual == 0)
+//			descansoAcionado = true;
+//		else
+//			descansoAcionado = false;
+		
 	}
 
 	@Override
@@ -29,4 +36,11 @@ public class Moto extends Veiculo {
 		super.parar();
 		descansoAcionado = true;
 	}
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return super.toString() + "; descanso acionado: " + descansoAcionado;
+	}
+	
 }

@@ -1,0 +1,24 @@
+Ex. 1 - Complemente o exercício atual ("Aula06_01"), com os seguintes requisitos: 
+
+- crie um JButton com o texto "Enviar", posicionando-o abaixo dos demais componentes;
+
+- utilizando o JButton e com auxílio de eventos ("ActionListener"), recupere o texto informado na caixa de texto (JTextField) e exiba-o num JOptionPane;
+
+- configure a fonte da JLabel e da JTextField, para que sejam maiores; e, no caso da JLabel, deixe sua fonte na cor azul.
+
+
+Ex. 2 ("Aula06_02"):
+
+- Utilizando SWING (JFrame, JLabel, JButton e JTextField), crie uma calculadora para as 4 operações aritméticas básicas (o form e a classe Principal devem ficar no pacote "view"). 
+
+Porém, crie os cálculos (as regras de negócio) num outro pacote (chamado "negocio"), a partir das classes concretas Adicao, Subtracao, Multiplicacao e Divisao, que serão filhas da classe abstrata "Calculo", que deverá ter os atributos "resultado", "valor1" e "valor2"; além disso, ela deverá implementar a interface ICalculo abaixo:
+
+interface ICalculo{
+    void calcular();
+}
+
+Assim, a estrutura do projeto deverá possuir:
+- 1 JFrame;
+- 3 JLabels (um para cada valor a ser recebido e outro para exibir o resultado);
+- 2 JTextFields (um para cada valor a ser recebido);
+- 4 JButtons (um para cada operação aritmética).

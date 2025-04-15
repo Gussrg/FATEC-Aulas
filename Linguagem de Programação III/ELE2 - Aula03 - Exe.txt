@@ -12,4 +12,3 @@ interface ICalculo {
 - por fim, na classe Principal, solicite ao usuário para informar a operação desejada, bem como os valores a serem trabalhados. De posse dessas informações, instancie a classe correspondente, realize o cálculo e apresente o resultado.
 
 Dica: para receber os dados do usuário, utilize Scanner ou JOptionPane.showInputDialog.
-

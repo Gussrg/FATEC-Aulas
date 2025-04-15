@@ -13,13 +13,13 @@ Ex. 2 - ("Aula04_02"):
 
 - na classe Principal, permita ao usuário selecionar qual tipo de veículo ele quer utilizar (carro ou moto) e instancie o que for correspondente;
 
-- aumente e diminua as velocidades a seu bel prazer, sempre exibindo a velocidade a cada alteração (considere criar um método para exibir essas informações);
+- aumente e diminua as velocidades a seu bel prazer, sempre exibindo a velocidade (e o modelo do veículo) a cada alteração (considere criar um método ou sobrescrever o método "toString" para exibir essas informações);
 
 - (opcional) se preferir incrementar mais o exercício, permita ao usuário escolher quando acelerar e desacelarar.
 
 
 Requisitos adicionais:
-- utilize um construtor não-default na classe Veiculo no seguinte formato: 
+- utilize um construtor não-default na classe Veiculo com a seguinte assinatura: 
       public Veiculo(String modelo, String fabricante, int ano);
 
 - implemente o encapsulamento (getters e setters) de modo que o valor da velocidade não possa ser alterado por alguma classe externa (alheia à regra de negócio), devendo ser alterada, apenas, pelos métodos de negócio ("acelerar", "desacelerar" e "parar");
