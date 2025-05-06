@@ -21,6 +21,7 @@ public class Main {
 			System.out.println("5 - Dividir premio em 3");
 			System.out.println("6 - Salário com desconto INSS ");
 			System.out.println("7 - Valor do veículo");
+			System.out.println("8 - Salário reajustado");
 			System.out.println("0 - Encerrar programa");
 			opt = scanner.nextInt();
 				
@@ -45,6 +46,9 @@ public class Main {
 					break;
 				case 7:
 					ex07();
+					break;
+				case 8:
+					ex08();
 					break;
 				case 0:
 					System.out.println("Encerrando o programa...");
@@ -139,6 +143,32 @@ public class Main {
 		roubo = scanner.nextFloat();
 		
 		System.out.println("O valor final do veículo é " + (vl_fabrica * (1 + dist_lucro / 100)) * (1 + roubo / 100));
+		
+	}
+	
+	static void ex08() {
+		//• Reajuste de salário com base em faixas: < 800 → 15%, 800 a 1000 → 10%, > 1000 → 5%.
+		
+		double salario, reajuste;
+		
+		System.out.println("Entre com o valor do salário: ");
+		salario = scanner.nextDouble();
+			
+		if (salario < 800) {
+			reajuste = salario * 1.15;
+			System.out.println("O salario reajustado em 15% é de R$%.2f" + reajuste);
+			
+			if (salario <=1000) {
+				reajuste = salario * 1.10;
+				System.out.printf(" O salário reajustado em 10% é de R$%.2f" + reajuste);
+				
+			}
+			
+		} else {
+			reajuste = salario * 1.05;
+			System.out.printf("O salário reajustado em 5% é de R$%.2f " + reajuste);
+		}	
+		
 		
 	}
 }
