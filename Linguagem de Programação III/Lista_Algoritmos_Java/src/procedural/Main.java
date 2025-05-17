@@ -141,7 +141,7 @@ public class Main {
 
 		System.out.println("Digite o valor de fábrica do veículo: ");
 		vl_fabrica = scanner.nextFloat();
-		System.out.println("Digite o valor percetual de lucro do distrubuidor: ");
+		System.out.println("Digite o valor percetual de lucro do distribuidor: ");
 		dist_lucro = scanner.nextFloat();
 		System.out.println("Digite o valor percentual dos impostos ");
 		roubo = scanner.nextFloat();
