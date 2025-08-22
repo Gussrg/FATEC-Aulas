@@ -1,0 +1,50 @@
+Ex. 1 (projeto "Aula11_01"):
+
+Crie um novo projeto no padrão Servlet. Crie um pacote para a regra de negócio (sugestão de nome: "business"), onde deverá existir uma classe concreta para cada operação aritmética (Adicao, Subtracao, Multiplicacao e Divisao). Essas classes serão responsáveis por realizar os cálculos das 4 operações aritméticas básicas. Cada uma dessas classes deverá implementar a interface ICalculo abaixo:
+
+interface ICalculo{
+    float calcular(float valor1, float valor2);
+}
+
+Num outro pacote (chamado "servlets"), crie o Servlet ("ServletCalculadora") e, dentro deste, crie um formulário para receber 2 valores numéricos e instanciar objetos das classes de cálculo. 
+
+Receba (via esse formulário) os valores informados pelo cliente e passe-os aos objetos de cálculo, realizando as 4 operações aritméticas (cada uma em um botão diferente) e devolvendo o resultado ao cliente (via HTML).
+
+
+
+
+
+Ex. 2 (projeto "Aula11_02"):
+Refaça o projeto anterior (agora como "Aula11_02"). Agora, porém, separe as responsabilidades em 2 servlets, um chamado "ServletForm" e outro chamado "ServletCalculadora". O primeiro deverá conter apenas o formulário HTML a ser exibido para que o usuário informe os valores. Já o segundo servlet deverá recuperar os valores informados no ServletForm, executar a regra de negócio correspondente e exibir o resultado.
+
+
+
+
+Ex. 3 (projeto "Aula11_03"):
+Crie um novo projeto no padrão Servlet. Crie um pacote para a regra de negócio chamado "business", onde deverá existir uma classe chamada "Massa", que implementará a interface abaixo:
+
+interface IMassa{
+	float converterQuiloParaLibra(float massa);
+	float converterLibraParaQuilo(float massa);
+}
+
+Em seguida, num outro pacote chamado "servlets", crie o servlet chamado "ServletForm" e, dentro deste, crie um formulário para receber 1 valor numérico a ser convertido. Crie 2 botões para realizar as conversões de quilogramas para libras e vice-versa.
+
+Neste mesmo pacote, crie um servlet chamado "ServletConversaoDeMassa" e, nele, recupera os valores informados pelo usuário e execute a regra de negócio para realizar a operação desejada, de acordo com o botão da conversão clicado no formulário HTML (do ServletForm). 
+
+Por fim, encaminhe o resultado para um terceiro servlet chamado "ServletResultado", no qual o resultado da conversão deverá ser exibido.
+
+Nota: 1kg ==> 2,2046lbs
+
+
+
+
+Ex. 4 (projeto "Aula11_04"):
+Crie um novo projeto padrão Servlet. Nesse projeto, faça um pacote para a regra (chamado "business"), onde deverá haver uma classe chamada "Media", que implementará uma interface chamada "IMedia", conforme apresentada abaixo: 
+
+interface IMedia{
+  float calcularMedia(float p1, float p2);
+  float calcularMedia(float p1, float p2, float tp);
+}
+
+Dentro de outro pacote ("servets"), crie um servlet chamado "ServletForm", para receber os dados necessários para calcular médias de alunos ("p1", "p2" e "tp", a depender da necessidade do usuário). Ao receber esses dados, repasse-os ao outro servlet ("ServletMedia"). Este deverá instanciar objeto(s) da classe "Media" e realizar o cálculo devido (somente um dos cálculos deverá ser realizado, com 2 ou 3 valores; não é para realizar ambos os cálculos de uma única vez). O cálculo a ser executado dependerá se o campo correspondente à nota de "tp" foi ou não preenchido. O resultado da média calculada deverá ser exibido entre tags "<h3>" num terceiro servlet chamado "ServletResultado".
