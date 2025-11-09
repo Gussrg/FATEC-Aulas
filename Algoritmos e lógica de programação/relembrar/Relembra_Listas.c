@@ -1,5 +1,5 @@
 //Projeto relembra ads
-#define e14
+#define e02
 
 #include<stdio.h>
 #include<locale.h>
@@ -24,14 +24,14 @@ int main(void)
 #endif // e01
 
 #ifdef e02
-/*2.	Receba via teclado um  n�mero positivo e exiba esse valor com reajuste de 10%.*/
+/*2.	Receba via teclado um  número positivo e exiba esse valor com reajuste de 10%.*/
 
 int main(void){
     setlocale(LC_ALL,"");
 
     float num;
 
-    printf("Digite um n�mero: ");
+    printf("Digite um número: ");
     scanf("%f", &num);
     printf("O número %.2f reajustado em 10%% �: %.2f ", num, num*1.1);
 
@@ -50,7 +50,7 @@ int main(void){
 
     printf("Digite o valor atual: ");
     scanf("%f",&preco);
-    printf("O novo valor com 9%% de acr�scimo � de: %.2f ", preco*1.09);
+    printf("O novo valor com 9%% de acréscimo é de: %.2f ", preco*0.91);
 
     return 0;
 }
@@ -100,12 +100,12 @@ int main(void)
 
     do
     {
-        printf("Entre com o pre�o de f�brica do ve�culo: ");
+        printf("Entre com o preço de fábrica do veículo: ");
         scanf("%f", &preco_fab);
         if(preco_fab < 0)
         {
             system("cls");
-            printf("Valor inv�lido, digite um n�mero positivo!\n");
+            printf("Valor inválido, digite um número positivo!\n");
         }
 
     }
@@ -120,7 +120,7 @@ int main(void)
         if(lucro < 0)
         {
             system("cls");
-            printf("Valor inv�lido, digite um n�mero positivo!\n");
+            printf("Valor inválido, digite um número positivo!\n");
         }
     }
     while(lucro < 0);
@@ -133,7 +133,7 @@ int main(void)
         if(imposto < 0)
         {
             system("cls");
-            printf("Valor inv�lido, digite um n�mero positivo\n");
+            printf("Valor inválido, digite um número positivo\n");
         }
     }
     while(imposto < 0);
@@ -141,10 +141,10 @@ int main(void)
     lucro_calc = preco_fab *(lucro/100);
     imposto_calc = preco_fab*(imposto/100);
     preco_final = preco_fab + lucro_calc + imposto_calc;
-    printf("O valor do ve�culo de %.2f", preco_fab);
-    printf("\nO valor do lucro do distribuidor �: %.2f", lucro_calc);
-    printf("\nO valor dos impostos �: %.2f", imposto_calc);
-    printf("\nO valor final do ve�culo � %.2f", preco_final);
+    printf("O valor do veículo de %.2f", preco_fab);
+    printf("\nO valor do lucro do distribuidor é: %.2f", lucro_calc);
+    printf("\nO valor dos impostos: %.2f", imposto_calc);
+    printf("\nO valor final do veículo é %.2f", preco_final);
 
     return 0;
 
@@ -164,11 +164,11 @@ int main(void)
 
     do
     {
-        printf("Entre com valor em do seu sal�rio: R$");
+        printf("Entre com valor em do seu salário: R$");
         scanf("%f", &salarioIni);
         if(salarioIni < 0){
             system("cls");
-            printf("Digite um valor de sal�rio positivo!\n");
+            printf("Digite um valor de salário positivo!\n");
         }
     }
     while(salarioIni < 0);
@@ -176,18 +176,18 @@ int main(void)
     if(salarioIni < 800)
     {
         salarioNovo = salarioIni*1.15;
-        printf("\nO sal�rio reajustado ficou em R$%.2f\n", salarioNovo);
+        printf("\nO salário reajustado ficou em R$%.2f\n", salarioNovo);
     }
     else if(salarioIni >= 800 && salarioIni <=1000)
     {
         salarioNovo = salarioIni*1.10;
-        printf("\nO sal�rio reajustado ficou em R$%.2f\n", salarioNovo);
+        printf("\nO salário reajustado ficou em R$%.2f\n", salarioNovo);
 
     }
     else
     {
         salarioNovo = salarioIni*1.05;
-        printf("\nO sal�rio reajustado ficou em R$%.2f\n", salarioNovo);
+        printf("\nO salário reajustado ficou em R$%.2f\n", salarioNovo);
 
     }
 
@@ -258,13 +258,13 @@ int main(void)
 
     media = (nota1 + nota2 + nota3 + nota4)/4;
 
-    printf("\nA m�dia ficou %.1f\n", media);
+    printf("\nA média ficou %.1f\n", media);
     if(media<6)
     {
         printf("Aluno reprovado! =(\n ");
     }else
     {
-        printf("Parab�ns!!! Aluno aprovado!!!\n");
+        printf("Parabéns!!! Aluno aprovado!!!\n");
     }
 
     return 0;
@@ -287,21 +287,21 @@ int main(void)
 
         do
         {
-            printf("Digite o primeiro n�mero com valor entre 10 e 25: ");
+            printf("Digite o primeiro número com valor entre 10 e 25: ");
             scanf("%f",&num1);
             if(num1 < 10 || num1 >25)
             {
-                printf("N�mero inv�lido, digite novamente:\n");
+                printf("Número inválido, digite novamente:\n");
             }
         }while(num1 < 10 || num1 > 25);
 
         do
         {
-            printf("Digite o segundo n�mero, maior ou igual a zero:");
+            printf("Digite o segundo número, maior ou igual a zero:");
             scanf("%f", &num2);
             if(num2 < 0)
             {
-                printf("n�mero inv�lido!\n");
+                printf("número inválido!\n");
             }
         }while(num2<0);
 
@@ -309,11 +309,11 @@ int main(void)
         num4 = num1*num2*num3;
         somaQuadrado = (num1*num1)+(num2*num2)+(num3*num3)+(num4*num4);
 
-        printf("\nO quadrado de %.2f � %.2f", num1, num1*num1);
-        printf("\nO quadrado de %.2f � %.2f", num2, num2*num2);
-        printf("\nO quadrado de %.2f � %.2f", num3, num3*num3);
-        printf("\nO quadrado de %.2f � %.2f", num4, num4*num4);
-        printf("\nA soma dos quadrados �: %.2f", somaQuadrado);
+        printf("\nO quadrado de %.2f é %.2f", num1, num1*num1);
+        printf("\nO quadrado de %.2f é %.2f", num2, num2*num2);
+        printf("\nO quadrado de %.2f é %.2f", num3, num3*num3);
+        printf("\nO quadrado de %.2f é %.2f", num4, num4*num4);
+        printf("\nA soma dos quadrados é: %.2f", somaQuadrado);
         if(somaQuadrado < 50000)
         {
             printf("\n\nResultado insuficiente. Digite novos valores!\n\n");
@@ -344,18 +344,18 @@ int main(void)
 
     if(valor_a == 0 || valor_b == 0)
         {
-          printf("N�o � poss�vel verificar com valor 0!\n\n");
+          printf("Não é possível verificar com valor 0!\n\n");
 
         }
     else if(valor_a % valor_b == 0 || valor_b % valor_a == 0)
         {
-            printf("Os n�meros s�o multiplos!\n\n");
+            printf("Os números são multiplos!\n\n");
 
         }else{
-            printf("os numeros n�o s�o multiplos!\n\n");
+            printf("os numeros não são multiplos!\n\n");
         }
 
-        printf("Deseja comparar outros n�meros? s/n: ");
+        printf("Deseja comparar outros números? s/n: ");
         //fflush(stdin);  n�o � padr�o da biblioteca
         scanf(" %c", &continua); //espa�o antes do %c para limpar o buffer do teclado
         //getchar();  Desnecess�rio com o espa�o antes do %c
