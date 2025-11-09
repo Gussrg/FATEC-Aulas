@@ -1,9 +1,5 @@
 //Projeto relembra ads
-<<<<<<< Updated upstream
-#define e02
-=======
-#define e16
->>>>>>> Stashed changes
+#define e15
 
 #include<stdio.h>
 #include<locale.h>
@@ -56,13 +52,9 @@ int main(void){
 
     printf("Digite o valor atual: ");
     scanf("%f",&preco);
-<<<<<<< Updated upstream
-    printf("O novo valor com 9%% de acréscimo é de: %.2f ", preco*0.91);
-=======
-    printf("O novo valor com 9%% de acréscimo � de: %.2f ", preco*1.09);
->>>>>>> Stashed changes
+    printf("O novo valor com 9%% de desconto é de: %.2f ", preco*0.91);
 
-    return 0;
+     return 0;
 }
 
 #endif // e03
@@ -71,7 +63,7 @@ int main(void){
 
 
 int main(void){
-/*C�lculo de um sal�rio l�quido de um professor. Ser�o fornecidos via teclado o valor da hora aula,  o n�mero de aulas dadas e o  desconto do INSS.*/
+/*Calculo de um salário l�quido de um professor. Ser�o fornecidos via teclado o valor da hora aula,  o n�mero de aulas dadas e o  desconto do INSS.*/
 /*Calculo de um salário líquido de um professor. Serão fornecidos via teclado o valor da hora aula,  o número de aulas dadas e o desconto do INSS.*/
 
     setlocale(LC_ALL,"");
@@ -89,7 +81,6 @@ int main(void){
 
     salario = (num_aula*hora_aula)*((100 - desconto)/100);
 
-    printf("O sal�rio reajustado �: %.2f ",salario);
     printf("O salário reajustado é: %.2f ",salario);
 
     return 0;
@@ -653,8 +644,7 @@ int main(void)
     if(media >= 6)
     {
         strcpy(situacao, "Aprovado!");
-    }else
-    }
+
     else
     {
         strcpy(situacao, "Reprovado!");
