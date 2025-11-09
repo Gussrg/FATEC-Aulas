@@ -1,5 +1,9 @@
 //Projeto relembra ads
+<<<<<<< Updated upstream
 #define e02
+=======
+#define e16
+>>>>>>> Stashed changes
 
 #include<stdio.h>
 #include<locale.h>
@@ -7,6 +11,7 @@
 
 #ifdef e01
 /*1.	Receba via teclado um n�mero inteiro e exiba o seu sucessor e seu antecessor */
+/*1.	Receba via teclado um número inteiro e exiba o seu sucessor e seu antecessor */
 
 int main(void)
 {
@@ -33,7 +38,7 @@ int main(void){
 
     printf("Digite um número: ");
     scanf("%f", &num);
-    printf("O número %.2f reajustado em 10%% �: %.2f ", num, num*1.1);
+    printf("O número %.2f reajustado em 10%% é: %.2f ", num, num*1.1);
 
     return 0;
 }
@@ -42,6 +47,7 @@ int main(void){
 
 #ifdef e03
 /*3.	Solicite ao usu�rio o pre�o de um e calcular novo pre�o com desconto de 9%.*/
+/*3.	Solicite ao usuário o preço de um e calcular novo preço com desconto de 9%.*/
 
 int main(void){
     setlocale(LC_ALL,"");
@@ -50,7 +56,11 @@ int main(void){
 
     printf("Digite o valor atual: ");
     scanf("%f",&preco);
+<<<<<<< Updated upstream
     printf("O novo valor com 9%% de acréscimo é de: %.2f ", preco*0.91);
+=======
+    printf("O novo valor com 9%% de acréscimo � de: %.2f ", preco*1.09);
+>>>>>>> Stashed changes
 
     return 0;
 }
@@ -62,6 +72,7 @@ int main(void){
 
 int main(void){
 /*C�lculo de um sal�rio l�quido de um professor. Ser�o fornecidos via teclado o valor da hora aula,  o n�mero de aulas dadas e o  desconto do INSS.*/
+/*Calculo de um salário líquido de um professor. Serão fornecidos via teclado o valor da hora aula,  o número de aulas dadas e o desconto do INSS.*/
 
     setlocale(LC_ALL,"");
 
@@ -79,6 +90,7 @@ int main(void){
     salario = (num_aula*hora_aula)*((100 - desconto)/100);
 
     printf("O sal�rio reajustado �: %.2f ",salario);
+    printf("O salário reajustado é: %.2f ",salario);
 
     return 0;
 }
@@ -576,6 +588,8 @@ int main()
         printf("\n\nDeseja verificar outro número? (s/n) ");
         scanf(" %c", &continua);
     }while(continua == 's' || continua == 'S');
+
+    return 0;
 }
 
 #endif // e13
@@ -595,31 +609,98 @@ int main(void)
     printf("Entre com a primeira nota do aluno: ");
     scanf("%f", &nota1);
     }while(nota1 < 0 || nota1 > 10);
+    do
+    {
+        printf("Entre com a primeira nota do aluno: ");
+        scanf("%f", &nota1);
+    }
+    while(nota1 < 0 || nota1 > 10);
 
     do{
      printf("Entre com a segunda nota do aluno: ");
     scanf("%f", &nota2);
     }while(nota2 < 0 || nota2 > 10);
+    do
+    {
+        printf("Entre com a segunda nota do aluno: ");
+        scanf("%f", &nota2);
+    }
+    while(nota2 < 0 || nota2 > 10);
 
     do{
      printf("Entre com a terceira nota do aluno: ");
     scanf("%f", &nota3);
     }while(nota3 < 0 || nota3 > 10);
+    do
+    {
+        printf("Entre com a terceira nota do aluno: ");
+        scanf("%f", &nota3);
+    }
+    while(nota3 < 0 || nota3 > 10);
 
     do{
      printf("Entre com a quarta nota do aluno: ");
     scanf("%f", &nota4);
     }while(nota4 < 0 || nota4 > 10);
+    do
+    {
+        printf("Entre com a quarta nota do aluno: ");
+        scanf("%f", &nota4);
+    }
+    while(nota4 < 0 || nota4 > 10);
 
     media = (nota1 + nota2 + nota3 + nota4)/4;
     if(media >= 6)
     {
         strcpy(situacao, "Aprovado!");
     }else
+    }
+    else
     {
         strcpy(situacao, "Reprovado!");
     }
 
     printf("A média do aluno foi %.2f e seu status é: %s ", media, situacao);
+
+    return 0;
 }
 #endif // e14
+
+#ifdef e15
+/*15.	Leia dois valores a e b e os escreve com a mensagem: "São múltiplos" ou "Não são múltiplos".*/
+
+int main(void)
+{
+
+    setlocale(LC_ALL,"");
+
+    int num1, num2;
+    char continua;
+
+    do
+    {
+        printf("Digite o primeiro numero: ");
+        scanf("%d", &num1);
+        printf("Digite o segundo numero: ");
+        scanf("%d", &num2);
+        if(num1 == 0 ||  num2 == 0)
+        {
+            printf("Não é possível verificar com numero zero!\n");
+        }
+        else if(num1 % num2 == 0 || num2 % num1 == 0)
+        {
+            printf("Os números são multiplos! ");
+        }
+        else
+        {
+            printf("Os números não são multiplos!");
+        }
+        printf("Deseja comparar outros numeros?(s/n) \n");
+        scanf(" %c", &continua);
+    }
+    while(continua == 's' || continua == 'S');
+    return 0;
+}
+
+#endif // e15
+
