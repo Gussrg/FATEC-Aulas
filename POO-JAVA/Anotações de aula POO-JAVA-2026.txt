@@ -1,0 +1,57 @@
+Aula-09/02/26
+
+Linguagem Java 17 ou 21 
+P1 - 6/4/26 
+P2 - 1/6/26 (50%) 
+Trabalho: 8/6/26 (50%) 
+P3 - 15/6/26 
+P4 - 6/7/26 - 8/7/26 
+Referências 1- Head first Java 
+2- Java reflection in action 
+3- Documentação spring boot Conteúdo 
+1 - Conceitos básicos 
+2 - Construtores e tipos de enumeração 
+3 - Records e atributos 
+4 - Relacionamento entre classes Has-a Has-many 
+5 - Estrutura de dados 
+6 - herança 
+7 - Sobrecarga e sobrescrito 
+8 - abstração 
+9 - Polimorfismo Paramétrico Subtipos 
+10 - Desenvolvimento p/web Servidores Protocolo http Rotas Templatização 
+11 - Banco de dados 
+12 - Tópicos especiais
+
+	Conceitos basicos
+
+1 - Classe: Espaço para definir comportamento dos objetos
+
+2 - Objeto: Espaço na memória. Instância de uma Classe
+
+3 - Método: Ações dos objetos definidas na Classe
+4 - Atributo: Caracteristicas dos objetos definidas na Classe
+
+5 - Estado: Os valores do Atributo em um instante de tempo
+
+Aula 23/02/26
+
+	Contrutores
+Definição: Meio para inicializar um objeto(definir o estado inicial).
+Pode ser usado, também, para rotinas iniciais (inicialização de um banco de dados, por exemplo)
+O construtor é chamado apenas uma vez através do operador new.
+Em java, o construtor possui o mesmo nome da classe.
+
+	Enum
+Definição: É um tipo de possui uma quantidade finita de valores.
+
+Exercício:
+Um cartão de crédito possui valor da fatura e nível de fidelidade (gold, platinum ou black)
+Todo cartão possui um desconto de fatura de acordo com a fidelidade
+-2% para gold
+-3% para platinum
+-5% para black
+Implemente a situação descrita e um teste simples
+
+	Record
+Definição: É uma classe sem atributos que variam (Constantes).
+
