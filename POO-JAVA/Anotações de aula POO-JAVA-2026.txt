@@ -1,4 +1,8 @@
-Aula-09/02/26
+
+	Programação Orientada a Objetos em Java
+	Resumo básico das aulas do Prof. Dr. Alexandre Garcia de Oliveira
+
+Aula 1 - 09/02/26
 
 Linguagem Java 17 ou 21 
 P1 - 6/4/26 
@@ -6,85 +10,94 @@ P2 - 1/6/26 (50%)
 Trabalho: 8/6/26 (50%) 
 P3 - 15/6/26 
 P4 - 6/7/26 - 8/7/26 
-Referências 1- Head first Java 
+
+	Referências: 
+1- Head first Java 
 2- Java reflection in action 
 3- Documentação spring boot Conteúdo 
+	
+	Conteudo:
 1 - Conceitos básicos 
 2 - Construtores e tipos de enumeração 
 3 - Records e atributos 
 4 - Relacionamento entre classes Has-a Has-many 
 5 - Estrutura de dados 
-6 - herança 
+6 - Herança 
 7 - Sobrecarga e sobrescrito 
-8 - abstração 
+8 - Abstração 
 9 - Polimorfismo Paramétrico Subtipos 
 10 - Desenvolvimento p/web Servidores Protocolo http Rotas Templatização 
 11 - Banco de dados 
 12 - Tópicos especiais
 
-	Conceitos basicos
+	Conceitos basicos:
 
-1 - Classe: Espaço para definir comportamento dos objetos
+Classe: Espaço para definir atributos e métodos (comportamento) que objetos terão.
+Objeto: É uma instância concreta de uma classe, ocupando espaço na memória e possuindo estado e comportamento.
+Estado: Os valores do Atributo em um instante de tempo
+Método: Ações dos objetos definidas na Classe
+Atributo: Caracteristicas dos objetos definidas na Classe
 
-2 - Objeto: Espaço na memória. Instância de uma Classe
 
-3 - Método: Ações dos objetos definidas na Classe
-4 - Atributo: Caracteristicas dos objetos definidas na Classe
-
-5 - Estado: Os valores do Atributo em um instante de tempo
-
-Aula 23/02/26
-
-	Contrutores
-Definição: Meio para inicializar um objeto(definir o estado inicial).
+Aula 2 - 23/02/26
+	
+	Construtores:
+Definição: Meio para inicializar um objeto (definir o estado inicial).
+Deve ser usado para garantir que o objeto seja criado em um estado válido.
 Pode ser usado, também, para rotinas iniciais (inicialização de um banco de dados, por exemplo)
 O construtor é chamado apenas uma vez através do operador new.
-Em java, o construtor possui o mesmo nome da classe.
+Em Java, o construtor possui o mesmo nome da classe.
 
-	Enum
-Definição: É um tipo de possui uma quantidade finita de valores.
+	Enum:
+Definição: É um tipo especial que representa um conjunto fixo e finito de constantes.
+Record
+Definição: É uma classe sem atributos que variam (Constantes).
+É uma classe especial imutável usada para representar dados. 
+Seus atributos são automaticamente private final por padrão, não possuem Setters e recebem valores apenas no construtor.
 
-Exercício:
-Um cartão de crédito possui valor da fatura e nível de fidelidade (gold, platinum ou black)
+	Exercício:
+Um cartão de crédito possui valor da fatura e nível de fidelidade (Gold, platinum ou black)
 Todo cartão possui um desconto de fatura de acordo com a fidelidade
--2% para gold
+-2% para Gold
 -3% para platinum
 -5% para black
 Implemente a situação descrita e um teste simples
 
-	Record
-Definição: É uma classe sem atributos que variam (Constantes).
 
-Aula 02/03/26
+Aula -  02/03/26
 
 	Modificadores de acesso
 
-1-Acesso a atributo
+1 - Acesso a atributo
 Leitura: Permite a leitura de um valor na memória através de um atributo.
 	int x = obj.atributoInt +1;
 Escrita: Permite atualização de um valor na memória através de um atributo.
 	obj.atributoInt = 7;
-2-Acesso a método
-Chamada: obj.mpttodo();
+2 - Acesso a método
+Chamada: obj.metodo();
 membro = método + atributo
 
 Objetivo: Acoplamento baixo/coesão alta
+
 Acoplamento: "O quanto uma classe A sabe/modifica o estado de outra classe B"
 Coesão: "O quanto a classe A sabe/modifica o próprio estado"
+
+Encapsulamento: É o princípio de esconder os detalhes internos da classe, expondo apenas o necessário através de métodos públicos.
 Private: Acesso liberado para a própria classe
 Public: Acesso liberado para todas as classes
 Default: Acesso liberado para o pacote
-Protected: Acesso liberado para o pacote e subclassesc
-
+Protected: Acesso liberado para o pacote e subclasses
 Record: Para atributo, escrita sempre fechada (imutabilidade) e leitura aberta.
 
-	Métodos Getters e Setters
+	Métodos Getters e Setters:
 
 Getters: Acesso de leitura a um atributo.
 Setters: Liberam acesso de escrita a um atributo.
 
-	Modificador Static
-O modificador static desacopla o membro em questão da instância, tornando-o um membro de classe
-obs: Os valores das Enums são estáticos
+ 
+	Modificador Static:
+O modificador static desacopla o membro em questão da instância, tornando-o um membro de classe. Membros static pertencem à classe e não aos objetos. São compartilhados por todas as instâncias.
+Obs.: Os valores das Enums são estáticos.
 Cria um ponto de acesso global para o membro.
+
 
