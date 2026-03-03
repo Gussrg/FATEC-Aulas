@@ -4,7 +4,7 @@ public class Foo {
 
     public int x;
     private int y;
-    int z
+    int z;
 
     public void metodo1(){
         System.out.println("metodo 1");
