@@ -14,7 +14,9 @@ public class Aula3 {
         System.out.println(s3.getQtPulo());
         System.out.println("Total de sapos: " + Sapo.getQtSapo());
 
-        /*Revolver r = new Revolver(3,6);
+        Revolver r = new Revolver(3,6);
+        r.recarregar();
+        r.recarregar();
         r.recarregar();
         r.recarregar();
         r.recarregar();
@@ -23,7 +25,7 @@ public class Aula3 {
         r.atirar();
         r.atirar();
         r.atirar();
-        r.mostrar();*/
+        r.mostrar();
 
        /*Foo f = new Foo();
         f.x = 9; //Escrita

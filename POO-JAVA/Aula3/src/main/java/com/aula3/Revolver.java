@@ -12,13 +12,15 @@ public class Revolver {
     }
 
     public void atirar(){
-        if(qtMunicao > 0);
-        qtMunicao --;
+        if(qtMunicao > 0){
+            qtMunicao --;
+        }
     }
 
     public void recarregar(){
-        if(qtMunicao < qtMaxima);
+        if(qtMunicao < qtMaxima){
             qtMunicao++;
+        }
 
     }
     public void mostrar(){
