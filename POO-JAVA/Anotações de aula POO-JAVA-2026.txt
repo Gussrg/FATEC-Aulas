@@ -55,3 +55,36 @@ Implemente a situação descrita e um teste simples
 	Record
 Definição: É uma classe sem atributos que variam (Constantes).
 
+Aula 02/03/26
+
+	Modificadores de acesso
+
+1-Acesso a atributo
+Leitura: Permite a leitura de um valor na memória através de um atributo.
+	int x = obj.atributoInt +1;
+Escrita: Permite atualização de um valor na memória através de um atributo.
+	obj.atributoInt = 7;
+2-Acesso a método
+Chamada: obj.mpttodo();
+membro = método + atributo
+
+Objetivo: Acoplamento baixo/coesão alta
+Acoplamento: "O quanto uma classe A sabe/modifica o estado de outra classe B"
+Coesão: "O quanto a classe A sabe/modifica o próprio estado"
+Private: Acesso liberado para a própria classe
+Public: Acesso liberado para todas as classes
+Default: Acesso liberado para o pacote
+Protected: Acesso liberado para o pacote e subclassesc
+
+Record: Para atributo, escrita sempre fechada (imutabilidade) e leitura aberta.
+
+	Métodos Getters e Setters
+
+Getters: Acesso de leitura a um atributo.
+Setters: Liberam acesso de escrita a um atributo.
+
+	Modificador Static
+O modificador static desacopla o membro em questão da instância, tornando-o um membro de classe
+obs: Os valores das Enums são estáticos
+Cria um ponto de acesso global para o membro.
+
