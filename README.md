@@ -15,4 +15,6 @@
 
 - Engenharia de Software III
 
-- Linguagem de programação III- JAVA 
+- Linguagem de programação III- JAVA
+
+- Haskell
