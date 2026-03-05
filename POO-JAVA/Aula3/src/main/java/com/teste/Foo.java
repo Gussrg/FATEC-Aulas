@@ -21,6 +21,4 @@ public class Foo {
         this.y = y;
     }
 
-
-
 }
