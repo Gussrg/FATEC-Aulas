@@ -100,4 +100,14 @@ O modificador static desacopla o membro em questão da instância, tornando-o um
 Obs.: Os valores das Enums são estáticos.
 Cria um ponto de acesso global para o membro.
 
+Aula 09/03/26
 
+	Relacionamento entre classes
+
+Tem um (has-a): É quando uma classe B (Enum/Record) possui uma referência a uma outra classe C.
+
+
+	Execicio:
+	Um celular possui bateria. A bateria possui uma carga inteira(0 a 100). Toda bateria pode carregar 1 ponto ou descarregar 1 ponto.
+	Um celular ligado pode: recarregar; mostrar uma mensagem de bem vindo e desligar. A mensagem gasta um ponto de bateria. 
+	Um celular desligado pode ser ligado e isto lhe custa, também, um ponto de bateria. Implemente a situação descrita e faça testes.
