@@ -7,6 +7,7 @@ import com.aula5.estatica.TipoProduto;
 public class Aula5 {
 
     public static void main(String[] args) {
+
         Carrinho c = new Carrinho();
         Produto p1 = new Produto("Lapis", TipoProduto.BUGIGANGA,15);
         Produto p2 = new Produto("Coca Zero Lata",TipoProduto.ALIMENTO, 6);
@@ -15,6 +16,7 @@ public class Aula5 {
         Produto p5 = new Produto("Caderno", TipoProduto.BUGIGANGA,71);
         Produto p6 = new Produto("Fofura", TipoProduto.ALIMENTO,15);
         Produto p7 = new Produto("CD VIRGEM", TipoProduto.ELETRONICO,15);
+
         c.empilharProduto(p1);
         c.empilharProduto(p2);
         c.removerProduto();
@@ -24,7 +26,8 @@ public class Aula5 {
         c.empilharProduto(p6);
         c.empilharProduto(p7);
         c.listarProduto();
-        System.out.println(c.calcularValorTotal());
+        
+        System.out.println("Valor total: R$ " + c.calcularValorTotal());
     }
 
 }

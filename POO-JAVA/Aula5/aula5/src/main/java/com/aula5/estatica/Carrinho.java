@@ -6,7 +6,6 @@ public class Carrinho {
     private Produto[] carrinho;
 
     public static final int QT_MAX = 5;
-
     private int topo; // controla quantos elementos existem
 
     public Carrinho(){
