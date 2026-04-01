@@ -2,18 +2,19 @@ package com.lista1.ex1;
 
 public class Churrasco {
 
-    boolean consumo;
+    double qtdCarne;
 
-    public void semConsumo(){
-        if(Pessoa.idade < 3 || Pessoa.vegetariana == true){
-            consumo = false;
+    public double verificarConsumo(Pessoa pessoa){
+        if((pessoa.vegetariana) || pessoa.idade >= 0 && pessoa.idade <=3){
+            qtdCarne = 0;
         }
-    }
-
-    public void verificarConsumo(){
-        if(semConsumo()){
-            System.out.println("Não consome carne!");
+        if(pessoa.idade <= 12){
+            qtdCarne = 1;
         }
+        else{
+            qtdCarne = 2;
+        }
+        return qtdCarne;
         
     }
 

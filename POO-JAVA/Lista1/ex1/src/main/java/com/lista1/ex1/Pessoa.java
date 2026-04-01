@@ -9,7 +9,11 @@ public class Pessoa {
     public Pessoa(String nome, String sexo, int idade, boolean vegetariana) {
         this.nome = nome;
         this.sexo = sexo;
-        this.idade = idade;
+        if(idade < 0){
+            System.out.println("Idade não pode ser menor que zero!!!");
+        }else{
+            this.idade = idade;
+        }
         this.vegetariana = vegetariana;
     }
 
