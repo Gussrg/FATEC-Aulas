@@ -141,5 +141,63 @@ Cuidado:
 	-Não pode "Baixar a visibilidade".
 
 obs: A chamada do método correto depende do tipo do chamador.
+A anotation(comentário compilável) @override verifica se a sobrescrita está implementada corretamente
 
+Aula 04/05/26
+	Classes abstratas
+Defnição: São classes que podem ter métodos a serem implementados em suas subclasses, são usadas para generalização de funcionalidades.
+Obs:Uma classe abstrada não pode ser instanciada
+Método abstrado: É um método sem corpo de código, que serve apenas para ser sobrescrito.
+	
+	"Roteiro para identificar classes abstratas"
+Para cada método, faça estas perguntas.
+1)Esse método faz sentido nessa classe? n
+2)O comportamento depende das subclasses? s
+Conclusão: O método em questão é abstrato!
+
+Obs: Só classes abstratas possuem métodos abstratos
+Exceções: Interfaces e enums.
+Obs2: Classes concretas são obrigadas a sobrescrever classes abstratas (da superclasse)
+
+	Interfaces
+Definição: São tipos que podem ter métodos a serem implementados em suas subclasses, são usados para generalização de funcionalidades. Em uma interface, não é permitido o uso de atributo não-constantes.
+São permitidos:
+-Constantes
+-Métodos abstratos (padrão)
+-Métodos estáticos
+-Métodos Default
+
+"Roteiro para identificar Interfaces"
+Para cada método, faça estas perguntas.
+1)Esse método faz sentido nessa classe? n
+2)O comportamento depende das subclasses? s
+3)Há atributos não constantes?
+
+Obs:Todo método por padrão é público e abstrato(por padrão)
+
+Obs2: Membros privados
+
+Obs3: Classe1 extends classe 2
+interface1 extends interface 2
+Classe implements interface1, interface2, interfaceN
+
+	Polimorfismo de subtipos
+Definição: Sejam B, C Classes com B<C então em um contexto onde C é aceito, B também será.
+	public void método(C c){}
+As seguintes linhas: 
+	a)obj.metodo(new C()); Compila
+	b)obj.metodo(new String ("J")); Não compila String != C
+porém
+	c)obj.metodo(new B()); Compila, pois o polimorfismo de subtipos garante a aceitação do programa
+
+C c = new C();
+C c = new String("OI"); X
+C c = new b(); (polimorfismo)
+
+
+Idea: ORM "de pobre"
+	INSERT INTO Produto(nome, valor, qtd)
+	VALUES (?,?,?)
+	INSERT INTO Cliente(Nome, cpf)
+	VALUES(?,?,?)
 

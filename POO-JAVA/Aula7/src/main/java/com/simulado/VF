@@ -1,0 +1,10 @@
+a F, pois final indica que a variavel eh constante 
+b F, arvore Binaria possui 2 leafs
+c F, static desacopla o membro de sua instancia
+d F, acesso de escrito
+e F, boa pratica 
+f V
+g V 
+h V 
+i F, int eh tipo primitivo. Nao admite null.
+j V 
