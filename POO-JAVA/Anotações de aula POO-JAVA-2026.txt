@@ -112,6 +112,22 @@ Tem um (has-a): É quando uma classe B (Enum/Record) possui uma referência a um
 	Um celular ligado pode: recarregar; mostrar uma mensagem de bem vindo e desligar. A mensagem gasta um ponto de bateria. 
 	Um celular desligado pode ser ligado e isto lhe custa, também, um ponto de bateria. Implemente a situação descrita e faça testes.
 
+Aula 23/03/26
+
+	Polimorfismo Paramétrico
+
+Definição: É uma maneira de colocar comportamentos dependentes de um tipo T em uma classe.
+	Classe<T> //(T= variável de tipo)
+
+Podemos ter em memória:
+	Classe<String>
+	Classe<Integer>
+
+Integer: "Boxed" int.
+obs: T não aceita tipos primitivos, aceita apenas Classes/Records/Enums.
+
+Map(Estrutura chave/Valor)
+
 Aula 27/04/26
 	Herança (IS-A)
 Def: Sejam A,B classes. Considere a relação A<=B, isso é, A é subclasse de B. Ou, B é superclasse de A(note a camada hierárquica).
