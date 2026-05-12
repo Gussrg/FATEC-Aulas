@@ -1,0 +1,14 @@
+Ex. 1 (projeto "Aula12_02"):
+
+Utilizando o exemplo de form HTML abaixo, crie um projeto Java web no qual haja um Servlet. Dentro dele deverá ser criado um formulário HTML para que o usuário informe um nome e um email. 
+
+	<form>
+	  Nome: <input type='text' name='txtNome' required><br>
+	  e-mail: <input type='email' name='txtEmail' required><br><br>
+	  <input type='submit' value='Enviar dados'>
+	</form><br>
+
+
+
+Em seguida, recupere esses dados e exiba-os na própria página. 
+
