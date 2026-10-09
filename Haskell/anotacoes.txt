@@ -1,0 +1,61 @@
+a)
+qtdVogais :: String -> Int
+qtdVogais palavra = legnth [x | x<-palavra, elem x "AEIOUaeiou"]
+
+qtdVogais palavra = legnth [x | x<-palavra, elem x "AEIOUaeiou"]
+qtdVogais palavra = length $ map (\ x -> elem x "AEIOUaeiou" palavra
+qtdVogais palavra = foldl (\ b a ->if elem a "AEIOUaeiou" then b +1 else a ) 0 palavra
+
+b)
+qtdMaiorZero :: [Int] -> Int
+qtdMaiorZero xs = length [x | x<-xs, x >= 0]
+
+qtdMaiorZero xs = length $ filter (>=0) xs
+
+c)
+qtdA :: String -> Int
+qtdVA palavra = length [x | x<-palavra, elem x "Aa"]
+
+2)
+
+data Cor = Vermelho | Azul | Verde deriving Show	
+
+data Construção = Casa{cor::Cor, preco::Double, metragem::Float} 
+		| Apartamento {cor::Cor, preco::Double, metragem::Float} deriving Show
+
+
+ehVermelha :: Construcao -> Bool
+ehVermelha (Casa Vermelha _ _ ) = True
+ehVermelha _ = False
+
+casasVermelhas :: [Construcao] -> [Construcao]
+casasVermelhas imóveis = [x | x<-xs, ehVermelha x]
+
+filter ehVermelha xs
+
+casasVermelhas imóveis = [x | x@{Casa Vermelha _ _}<-xs]
+
+=--------------------
+
+precoTotal :: [Construcao] -> Double
+precoTotal imóveis = sum $ map preco $ casasVermelhas imóveis
+
+
+5)
+
+
+:t map (\ x -> x * x - x) [3,4,5] :: (Num b) => [b]
+
+filter (\ x -> x == 91) [90..100] = [91]
+
+:t (3,"4") :: Num a => (a,String)
+
+
+
+foldl (\ a b -> a + b) 0 [5,4..1] =
+
+foldl (\ 0 5 -> 0 + 5) 5 [4..1]
+foldl (\ 5 4 -> 5 + 4) 5 [3..1]
+
+
+
